@@ -1,0 +1,57 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+$footer-bg-color: rgb(31, 31, 31);
+.footer{
+    width: 100%;
+    background-color: $footer-bg-color;
+    .wrapper{
+        width: $max-width;
+        margin: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        .col1{
+            width: 20%;
+        }
+    }
+}
+.bottom{
+    padding: 20px;
+    font-size: 16px;
+    width: 100%;
+    color: white;
+    background-color: $footer-bg-color;
+    .wrapper{
+        display:flex;
+        justify-content: space-between;
+        width: $max-width;
+        margin: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        .bottom-left{
+            .element{
+                margin-right: 5px;
+                &:not(:last-child):after{
+                    content: '|';
+                    margin-left: 5px;
+                }
+                &:hover:after{
+                    color: white;
+                }
+            }
+        }
+        .bottom-right{
+
+        }
+    }
+    a{
+        color: white;
+        transition: all 0.3s ease;
+        &:hover{
+            color: green;
+            transition: all 0.3s ease;
+        }
+
+    }
+
+}

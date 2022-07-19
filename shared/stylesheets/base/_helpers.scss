@@ -1,0 +1,243 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+$xxs: 5px;
+$xs: 10px;
+$s: 20px;
+$m: 30px;
+$l: 40px;
+$xl: 60px;
+
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+/**
+ * Main content containers
+ * 1. Make the container full-width with a maximum width
+ * 2. Center it in the viewport
+ * 3. Leave some space on the edges, especially valuable on small screens
+ */
+.container {
+  max-width: $max-width;
+  /* 1 */
+  margin-left: auto;
+  /* 2 */
+  margin-right: auto;
+  /* 2 */
+  padding-left: 20px;
+  /* 3 */
+  padding-right: 20px;
+  /* 3 */
+  width: 100%;
+  /* 1 */
+}
+
+/**
+ * Hide text while making it readable for screen readers
+ * 1. Needed in WebKit-based browsers because of an implementation bug;
+ *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+ */
+.hide-text {
+  overflow: hidden;
+  padding: 0;
+  /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justitfy-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+
+.pr-20 {
+  padding-right: 20px;
+}
+
+.half {
+  width: calc(#{$max-width} / 2);
+}
+
+// Padding
+.p-xxs {
+  padding: $xxs;
+}
+
+.p-xs {
+  padding: $xs;
+}
+
+.p-s {
+  padding: $s;
+}
+
+.p-m {
+  padding: $m;
+}
+
+.p-l {
+  padding: $l;
+}
+
+.p-xl {
+  padding: $xl;
+}
+// Padding bottom
+.pb-xxs {
+  padding-bottom: $xxs;
+}
+
+.pb-xs {
+  padding-bottom: $xs;
+}
+
+.pb-s {
+  padding-bottom: $s;
+}
+
+.pb-m {
+  padding-bottom: $m;
+}
+
+.pb-l {
+  padding-bottom: $l;
+}
+
+.pb-xl {
+  padding-bottom: $xl;
+}
+// Padding right
+.pr-xxs {
+  padding-right: $xxs;
+}
+
+.pr-xs {
+  padding-right: $xs;
+}
+
+.pr-s {
+  padding-right: $s;
+}
+
+.pr-m {
+  padding-right: $m;
+}
+
+.pr-l {
+  padding-right: $l;
+}
+
+.pr-xl {
+  padding-right: $xl;
+}
+
+
+// Margin
+.m-xxs {
+  margin: $xxs;
+}
+
+.m-xs {
+  margin: $xs;
+}
+
+.m-s {
+  margin: $s;
+}
+
+.m-m {
+  margin: $m;
+}
+
+.m-l {
+  margin: $l;
+}
+
+.m-xl {
+  margin: $xl;
+}
+// Padding bottom
+.mb-xxs {
+  margin-bottom: $xxs;
+}
+
+.mb-xs {
+  margin-bottom: $xs;
+}
+
+.mb-s {
+  margin-bottom: $s;
+}
+
+.mb-m {
+  margin-bottom: $m;
+}
+
+.mb-l {
+  margin-bottom: $l;
+}
+
+.mb-xl {
+  margin-bottom: $xl;
+}
+// Padding right
+.mr-xxs {
+  margin-right: $xxs;
+}
+
+.mr-xs {
+  margin-right: $xs;
+}
+
+.mr-s {
+  margin-right: $s;
+}
+
+.mr-m {
+  margin-right: $m;
+}
+
+.mr-l {
+  margin-right: $l;
+}
+
+.mr-xl {
+  margin-right: $xl;
+}

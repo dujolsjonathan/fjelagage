@@ -1,0 +1,186 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+$margin-left-on-the-menu: 50px;
+$margin-top-lvl2: 40px;
+$lvl2-border-radius: 15px;
+$lvl2-bg-color-hover: rgb(238, 203, 224);
+$lvl1-color: white;
+$lvl2-color: rgb(88, 88, 88);
+$lvl1-color-hover: rgb(0, 81, 255);
+
+$navbar-light-brand-color: blue;
+
+
+.navbar {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 50;
+    .dropdown:hover .dropdown-menu{
+        display: block;
+    }
+    .dropdown-menu{
+        margin-top: 0;
+    }
+    .nav-item{
+        margin-left: 15px;
+    }
+  }
+
+.bg-light{
+    background-color: rgba(0, 0, 0, 0.4)!important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+
+
+
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+// .main-header {
+//     // position: absolute;
+//     // left: calc(50vw - 1400px / 2); /// $max-width fouiller
+//     background-color: rgba(0, 0, 0, 0.4);
+//     // display: flex;
+//     // justify-content: space-between;
+//     // align-items: center;
+//     padding-left: 0;
+//     z-index: 50;
+//     width: 100%;
+
+//     .row {
+//         // display: flex;
+//         // justify-content: space-between;
+//         // align-items: center;
+//         // margin: auto;
+//         // width: $max-width;
+//     }
+
+//     .logo {
+//         width: 100px;
+//         height: 100px;
+//     }
+
+//     .a:hover {
+//         text-decoration: none;
+//     }
+
+//     nav {
+//         ul {
+//             list-style-type: none;
+//         }
+
+//         .level1 {
+//             display: flex;
+//             align-items: center;
+
+//             li {
+
+//                 position: relative;
+//                 margin-left: $margin-left-on-the-menu;
+
+//                 a {
+//                     color: $lvl1-color;
+//                     padding: 15px 0;
+//                     transition: 0.3s all ease;
+
+//                     &:hover {
+//                         color: $lvl1-color-hover;
+//                         transition: 0.3s all ease;
+//                     }
+
+//                     cursor: pointer;
+//                 }
+//             }
+
+//             li:hover .level2 {
+//                 display: flex;
+
+//                 opacity: 1;
+//                 -webkit-transition: none;
+//                 -ms-transition: none;
+//                 transition: none;
+//             }
+
+//             .chevron:after {
+//                 font-family: "Font Awesome 5 Free";
+//                 content: '\f078';
+//                 display: inline-block;
+//                 margin-left: 5px;
+//                 margin-bottom: 3px;
+//                 vertical-align: middle;
+//                 font-weight: 900;
+//                 font-size: 16px;
+//                 color: $lvl1-color;
+//                 transition: 0.3s all ease;
+//             }
+
+//             .chevron:hover:after {
+//                 transform: rotate(90deg);
+//                 transition: 0.3s all ease;
+//             }
+//         }
+
+//         .level2 {
+//             display: none;
+//             position: absolute;
+//             padding-top: $margin-top-lvl2;
+//             flex-direction: column;
+//             // background-color: green;
+//             padding-left: 0;
+            
+//             &.right {
+//                 right: 0;
+//             }
+
+//             &.left {
+//                 left: 0;
+//             }
+
+//             li {
+//                 margin-left: 0;
+//                 background-color: white;
+//                 float: left;
+//                 white-space: nowrap;
+//                 min-width: 150px;
+//                 padding: 5px 10px;
+//                 transition: 0.3s ease all;
+//                 a{
+//                     color: $lvl2-color;
+
+//                 }
+//             }
+
+//             li:first-child {
+//                 border-top-left-radius: $lvl2-border-radius;
+//                 border-top-right-radius: $lvl2-border-radius;
+//             }
+
+//             li:last-child {
+//                 border-bottom-left-radius: $lvl2-border-radius;
+//                 border-bottom-right-radius: $lvl2-border-radius;
+//             }
+
+//             li:hover {
+//                 background-color: $lvl2-bg-color-hover;
+//                 transition: 0.3s ease all;
+//             }
+
+//             // &.open {
+//             //     display: block;
+//             //     opacity: 1;
+//             //     -webkit-transition: none;
+//             //     -ms-transition: none;
+//             //     transition: none;
+//             // }
+//         }
+//     }
+// }

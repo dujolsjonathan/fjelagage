@@ -1,0 +1,14 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+.wrapper{
+    position: relative;
+    // max-width: $max-width;
+    width: 100vw;
+}
+.home-banner{
+    // background-image: url('../../assets/img/home/home-bg-fg.jpg');
+    // background-size: cover;
+    max-height: 100vh;
+    overflow: hidden;
+}
