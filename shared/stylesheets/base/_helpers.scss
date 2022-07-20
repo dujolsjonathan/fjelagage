@@ -1,6 +1,7 @@
 // -----------------------------------------------------------------------------
 // This file contains CSS helper classes.
 // -----------------------------------------------------------------------------
+$xxxs: 3px;
 $xxs: 5px;
 $xs: 10px;
 $s: 20px;
@@ -240,4 +241,32 @@ $xl: 60px;
 
 .mr-xl {
   margin-right: $xl;
+}
+
+// Padding left
+.ml-xxxs {
+  margin-left: $xxxs;
+}
+.ml-xxs {
+  margin-left: $xxs;
+}
+
+.ml-xs {
+  margin-left: $xs;
+}
+
+.ml-s {
+  margin-left: $s;
+}
+
+.ml-m {
+  margin-left: $m;
+}
+
+.ml-l {
+  margin-left: $l;
+}
+
+.ml-xl {
+  margin-left: $xl;
 }

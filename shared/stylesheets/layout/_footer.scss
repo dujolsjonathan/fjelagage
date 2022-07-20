@@ -2,21 +2,68 @@
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
 $footer-bg-color: rgb(31, 31, 31);
-.footer{
+
+.custom-shape-divider-top-1658315789 {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1658315789 svg {
+    position: relative;
+    display: block;
+    width: calc(137% + 1.3px);
+    height: 121px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1658315789 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.footer{
+    // width: 100%;
+    position: relative;
+    color: white;
     background-color: $footer-bg-color;
+    padding-top: 120px;
     .wrapper{
-        width: $max-width;
+        max-width: $max-width;
         margin: auto;
-        padding-left: 20px;
-        padding-right: 20px;
-        .col1{
-            width: 20%;
+        padding: 40px 0;
+        @include md{
+            padding: 0;
+
+        }
+        .block{
+            @include md {
+                align-items: center!important;
+                margin-bottom: 15px;
+            }
+            h1{
+                @include md {
+                    text-align: center;
+                }
+            }
+            .fa-facebook-f{
+                font-size: 32px;
+            }
+        }
+    }
+    a{
+        color: white;
+        // text-decoration: underline;
+        &:hover{
+        text-decoration: underline;
+
         }
     }
 }
 .bottom{
-    padding: 20px;
+    padding: 20px 0;
     font-size: 16px;
     width: 100%;
     color: white;
@@ -24,26 +71,39 @@ $footer-bg-color: rgb(31, 31, 31);
     .wrapper{
         display:flex;
         justify-content: space-between;
-        width: $max-width;
+        max-width: $max-width;
         margin: auto;
-        padding-left: 20px;
-        padding-right: 20px;
+       
+        // padding-left: 20px;
+        // padding-right: 20px;
         .bottom-left{
             .element{
                 margin-right: 5px;
                 &:not(:last-child):after{
                     content: '|';
                     margin-left: 5px;
+                    @include md {
+                        content: '';
+                        margin-left: 0;
+                    }
                 }
                 &:hover:after{
                     color: white;
                 }
+                @include md {
+                    display: flex;
+                    justify-content: center;
+                }
             }
         }
         .bottom-right{
-
+            text-align: right;
+            @include md {
+                text-align: center;
+            }
         }
     }
+
     a{
         color: white;
         transition: all 0.3s ease;

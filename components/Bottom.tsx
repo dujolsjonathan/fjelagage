@@ -15,17 +15,19 @@ const Header = () => {
     }, []);
     return (
         <div className='bottom'>
-            <div className="wrapper">
-                <div className='bottom-left'>
-                <span className="element">{new Date().getFullYear()} © FJ Elagage</span>
-                <a href="#" className="element">Mentions Légales</a>
-                <a href="#" className="element">Données Personnelles</a>
-                <a href="#" className="element">Gestion des cookies</a>
+            <div className='container'>
+                <div className="row wrapper ">
+                    <div className='col-md-10 bottom-left'>
+                        <span className="element">{new Date().getFullYear()} © FJ Elagage</span>
+                        <a href="#" className="element">Mentions Légales</a>
+                        <a href="#" className="element">Données Personnelles</a>
+                        <a href="#" className="element">Gestion des cookies</a>
+                    </div>
+                    <div className='col-md-2 bottom-right'>Zukah</div>
                 </div>
-                <div className='bottom-right'>Zukah</div>
+
+
             </div>
-
-
         </div>
     )
 }

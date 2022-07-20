@@ -3,6 +3,27 @@
  */
 body {
   color: $text-color;
-  font: normal 125% / 1.4 $text-font-stack;
-  // font:$text-font-stack;
+  // font: normal 125% / 1.4 $text-font-stack;
+  font:$text-font-stack;
+}
+
+h1{
+
+}
+
+h2{
+
+}
+
+h3{
+
+}
+
+h4{
+
+}
+
+h5{
+  font-size: 1.1rem;
+  font-weight: 700;
 }

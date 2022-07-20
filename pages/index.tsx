@@ -53,8 +53,8 @@ const Home: NextPage = () => {
       </div>
 
 
-      {/* <Footer />
-      <Bottom /> */}
+      <Footer />
+      <Bottom />
       {/* <div className="nav"></div> */}
       {/* <main className={styles.main}>
         <h1 className={styles.title}>
