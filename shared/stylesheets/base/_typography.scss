@@ -13,6 +13,13 @@ h1{
 
 h2{
 
+  color: $tertiary-color;
+  font-weight: 500;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  &span{
+      
+  }
 }
 
 h3{
@@ -24,6 +31,7 @@ h4{
 }
 
 h5{
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 700;
+  color: #9CD421;
 }

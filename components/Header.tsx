@@ -1,6 +1,7 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import Logo from '../shared/assets/img/logo.svg';
+import Logo from '../shared/assets/img/logo-test.png';
 
 const Header = () => {
     const [show, setShow] = useState(false);
@@ -16,7 +17,8 @@ const Header = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light navbar-absolute">
             <div className="container">
-                <Logo className='logo' />
+                {/* <Logo className='logo' /> */}
+                <Image className='logo' src={Logo} alt="..." width="150%" height="100%"/>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>

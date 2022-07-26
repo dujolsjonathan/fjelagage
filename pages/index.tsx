@@ -2,10 +2,11 @@ import type { NextPage } from 'next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Bottom from '../components/Bottom';
-import Head from 'next/head'
-import Image from 'next/image'
-import wood from "../shared/assets/img/home/home-bg-fg.jpg";
+import Head from 'next/head';
+import Image from 'next/image';
+import wood from "../shared/assets/img/home/elagage1.png";
 import Img2 from "../shared/assets/img/home/bois.jpg";
+import PictoSafely from "../shared/assets/img/home/protection.png";
 // import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -21,37 +22,58 @@ const Home: NextPage = () => {
         />
       </Head>
       <Header />
-      <div className='home-banner mb-xl'>
+      <div className='home-banner'>
         <Image src={wood} alt="..." layout="responsive" objectFit="cover" objectPosition="center" />
-      </div>
+        <div className="banner-title">
+          <h1><span>élagage abattage</span><br /> dans les landes</h1>
+          <p>20 ans d’expérience à votre service</p>
+          <a href="#" className="btn btn-primary">En savoir plus</a>
+        </div>
 
-      <div className="container mb-xl">
+      </div>
+      <a href="#" >
+        <div className="container-fluid promotion">
+          Destockage bois de chauffage - Offre spéciale
+        </div>
+      </a>
+      <div className="container">
         <div className="row align-items-stretch justify-content-center">
 
-          <div className="col-md-6  mb-m">
-            <h2>En savoir</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend tempus ex, ut ornare magna semper vel. Aliquam at vehicula mauris. Nunc sed felis tristique, dignissim ex ut, sollicitudin turpis. Integer malesuada vulputate augue sed molestie. Suspendisse eget diam lacus. Nulla gravida tellus quis erat malesuada tempus. Integer sit amet aliquam sem. Sed nunc enim, hendrerit at felis quis, iaculis consequat nisi. Integer eleifend felis in diam suscipit, sit amet mollis ligula sollicitudin. Cras dapibus id dui eget mattis. Donec mattis turpis eget felis rutrum, lobortis semper lacus finibus. Suspendisse tempus eu felis sed consectetur. Praesent tempus rhoncus ante nec facilisis.</p>
+          <div className="col-md-6 order-md-2 mb-m p-m d-flex flex-column justify-content-center">
+            <h2>Elagage au coeur des Landes</h2>
+            <p>L’élagage fait partie de l’entretien courant de votre jardin. Faire appel à une entreprise d‘élagage c’est avant tout <strong>assurer une bonne croissance de vos arbres et arbustes</strong>.<br />Spécialisé depuis 20 ans, en élagage et abatage d’arbres.<br />FJ Elagage vous apporte son savoir-faire. </p>
             <button type="button" className="btn btn-primary">En savoir plus</button>
           </div>
-          <div className="col-md-6  mb-m">
+          <div className="col-md-6 order-md-1 mb-md-m pr-0 ">
             <Image src={wood} alt="..." layout="responsive" objectFit='contain' />
           </div>
         </div>
       </div>
+
+
+
       <div className="container mb-xl">
         <div className="row align-items-stretch justify-content-center">
 
-          <div className="col-md-6 order-md-2 mb-m">
-            <h2>En savoir</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend tempus ex, ut ornare magna semper vel. Aliquam at vehicula mauris. Nunc sed felis tristique, dignissim ex ut, sollicitudin turpis. Integer malesuada vulputate augue sed molestie. Suspendisse eget diam lacus. Nulla gravida tellus quis erat malesuada tempus. Integer sit amet aliquam sem. Sed nunc enim, hendrerit at felis quis, iaculis consequat nisi. Integer eleifend felis in diam suscipit, sit amet mollis ligula sollicitudin. Cras dapibus id dui eget mattis. Donec mattis turpis eget felis rutrum, lobortis semper lacus finibus. Suspendisse tempus eu felis sed consectetur. Praesent tempus rhoncus ante nec facilisis.</p>
-            <button type="button" className="btn btn-primary">En savoir plus</button>
+          <div className="col-md-6 mb-m p-m d-flex flex-column justify-content-center">
+            <h2>Du bois de chauffage livré toute l’année dans les Landes</h2>
+            <p>En tant que professionnel du bois, nous fournissons du bois de chauffage toute l’année.<br />Livré chez vous gratuitement dans la mesure de la proximité.<br />Plusieurs tailles et essences disponibles</p>
+            <button type="button" className="btn btn-primary">Consulter notre offre</button>
           </div>
-          <div className="col-md-6 order-md-1 mb-m">
+          <div className="col-md-6 mb-m pl-0">
             <Image src={Img2} alt="..." layout="responsive" objectFit='contain' />
           </div>
         </div>
       </div>
 
+      <div className="container-fluid" style={{backgroundColor: "rgba(67, 67, 67, 1)"}}>
+        <div className="pictos-container">
+          <div className="picto-container"><Image className="picto" src={PictoSafely} alt="..." layout="responsive" objectFit='contain' /><span className="text">Sécurité</span></div>
+          <div className="picto-container"></div>
+          <div className="picto-container"></div>
+
+        </div>
+      </div>
 
       <Footer />
       <Bottom />

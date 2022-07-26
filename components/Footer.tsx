@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import Logo from '../shared/assets/img/logo.svg';
+import Image from 'next/image';
+import Logo from '../shared/assets/img/logo-test.png';
 
 const Header = () => {
     const [show, setShow] = useState(false);
@@ -24,11 +25,12 @@ const Header = () => {
                     </svg>
                 </div>
                 <div className=" row wrapper">
-                    <div className="col-md-3 block">
+                    <div className="col-md-2 block">
                         {/* <Logo className='logo' width='100%' height='100%' /> */}
-                        <h1 style={{ color: "green" }}> FJ Elagage</h1>
+                        <Image src={Logo} alt="..." layout={'responsive'} objectFit={'contain'} />
+                        {/* <h1 style={{ color: "green" }}> FJ Elagage</h1> */}
                     </div>
-                    <div className="col2 col-md-4 d-flex flex-column block">
+                    <div className="col2 col-md-4 offset-md-1 d-flex flex-column block">
                         <h5>Contact</h5>
                         <div className='d-flex '>
                             <a className="d-flex" href='https://www.google.fr/maps/place/1120+Rte+du+Bourg+Neuf,+40400+Meilhan/@43.8461799,-0.6958117,17z/data=!3m1!4b1!4m5!3m4!1s0xd542941d5e1b029:0x549662e401e34dc6!8m2!3d43.8461799!4d-0.693623' target='blank'>
@@ -55,7 +57,7 @@ const Header = () => {
                     </div>
                     <div className="col-md-2 d-flex flex-column align-items-end block">
                         <h5>Suivez-nous</h5>
-                        <a href="https://www.facebook.com/search/top?q=sarl%20faure" target='blank'><i className="fab fa-facebook-f fa-2xl"></i></a>
+                        <a href="https://www.facebook.com/SARL-FAURE-417324348795353" target='blank'><i className="fab fa-facebook-f fa-2xl"></i></a>
                     </div>
                 </div>
 

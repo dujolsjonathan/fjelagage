@@ -1,3 +1,23 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+.btn{
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 20px 0;
+    width: fit-content;
+    &.btn-primary{
+        background-color: $secondary-color;
+        color: $brand-color;
+        border: 2px solid $secondary-color;
+        padding: 10px 30px;
+        &:hover{
+            background-color: #4B280480;
+            color: white;
+            border: 2px solid $brand-color;
+        }
+    }
+
+}

@@ -145,6 +145,9 @@ $xl: 60px;
   padding-bottom: $xl;
 }
 // Padding right
+.pr-0{
+  padding-right: 0;
+}
 .pr-xxs {
   padding-right: $xxs;
 }
@@ -167,6 +170,34 @@ $xl: 60px;
 
 .pr-xl {
   padding-right: $xl;
+}
+
+// Padding left
+.pl-0{
+  padding-left: 0;
+}
+.pl-xxs {
+  padding-left: $xxs;
+}
+
+.pl-xs {
+  padding-left: $xs;
+}
+
+.pl-s {
+  padding-left: $s;
+}
+
+.pl-m {
+  padding-left: $m;
+}
+
+.pl-l {
+  padding-left: $l;
+}
+
+.pl-xl {
+  padding-left: $xl;
 }
 
 
