@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import Logo from '../shared/assets/img/logo-test.png';
+import Logo from '../shared/assets/img/footer/logo-footer.svg';
 
 const Header = () => {
     const [show, setShow] = useState(false);
@@ -25,9 +25,9 @@ const Header = () => {
                     </svg>
                 </div>
                 <div className=" row wrapper">
-                    <div className="col-md-2 block">
-                        {/* <Logo className='logo' width='100%' height='100%' /> */}
-                        <Image src={Logo} alt="..." layout={'responsive'} objectFit={'contain'} />
+                    <div className="col-md-2 d-flex flex-column block">
+                        <Link href="/"><a><Logo className='logo' /></a></Link>
+                        {/* <Image src={Logo} alt="..." layout={'responsive'} objectFit={'contain'} /> */}
                         {/* <h1 style={{ color: "green" }}> FJ Elagage</h1> */}
                     </div>
                     <div className="col2 col-md-4 offset-md-1 d-flex flex-column block">

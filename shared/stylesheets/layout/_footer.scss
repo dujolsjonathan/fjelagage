@@ -67,8 +67,17 @@ $footer-bg-color: #141117;
         &:hover {
             transition: all 0.3s ease;
             // text-decoration: underline;
-            color: #9CD421;
+            color: $brand-color;
 
+        }
+    }
+    .logo{
+        
+        height: 200px;
+        // margin: auto;
+        margin-top: -45px;
+        @include md {
+            margin-top: 0;
         }
     }
 }

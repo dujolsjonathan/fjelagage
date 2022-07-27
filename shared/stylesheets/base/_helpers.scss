@@ -119,6 +119,37 @@ $xl: 60px;
 
 .p-xl {
   padding: $xl;
+
+}
+// Padding y
+.py-xxs {
+  padding-top: $xxs;
+  padding-bottom: $xxs;
+}
+
+.py-xs {
+  padding-top: $xs;
+  padding-bottom: $xs;
+}
+
+.py-s {
+  padding-top: $s;
+  padding-bottom: $s;
+}
+
+.py-m {
+  padding-top: $m;
+  padding-bottom: $m;
+}
+
+.py-l {
+  padding-top: $l;
+  padding-bottom: $l;
+}
+
+.py-xl {
+  padding-top: $xl;
+  padding-bottom: $xl;
 }
 // Padding bottom
 .pb-xxs {

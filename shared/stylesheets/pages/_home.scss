@@ -48,7 +48,7 @@
 .promotion {
     background-color: $brand-color;
     color: white;
-    margin: auto;
+    // margin-left: auto;
     padding: 20px 0;
     text-align: center;
     font-size: 32px;
@@ -67,12 +67,12 @@
 
     
     max-width: $max-width;
-    margin: auto;
-    padding: 20px;
+    // margin: auto;
+    // padding: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 200px;
+    // height: 200px;
 
     .picto-container {
         height: 160px;
@@ -80,8 +80,9 @@
         border-radius: 50%;
         border: 2px solid $brand-color;
         padding: 40px;
-        margin: 20px;
+        margin: 30px;
         transition: 0.3s all ease;
+        transform: rotateY(180deg);
         .picto {
             padding: 20px;
         }
@@ -89,11 +90,21 @@
             transition: 0.3s all ease;
             transform: scale(1.1);
             border: 2px solid white;
+            .text{
+                display: block;
+                transform: rotateY(0);
+            }
+            .picto {
+                padding: 20px;
+                display: none;
+            }
         }
         .text{
-            color: white;
+            color: $brand-color;
             text-transform: uppercase;
             margin-top: 20px;
+            display: none;
+            transform: rotateY(180deg);
         }
     }
 }
