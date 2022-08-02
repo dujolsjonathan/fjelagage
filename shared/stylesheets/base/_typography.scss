@@ -8,6 +8,9 @@ body {
 }
 
 h1{
+  color: white;
+  font-size: 32px;
+  text-transform: uppercase;
 }
 
 h2{
@@ -15,6 +18,7 @@ h2{
   color: $tertiary-color;
   // font-family: $text-font-stack;
   font-weight: 500;
+  margin-top: 25px!important;
   margin-bottom: 25px;
   text-transform: uppercase;
   &span{

@@ -13,7 +13,7 @@ $navbar-light-brand-color: blue;
 
 
 .navbar {
-    position: absolute;
+    // position: absolute;
     top: 0px;
     width: 100%;
     z-index: 50;
@@ -32,6 +32,10 @@ $navbar-light-brand-color: blue;
         font-size: 20px;
     }
 
+    &.navbar-absolute {
+        position: absolute;
+    }
+
     &.navbar-light .navbar-nav .nav-link {
         color: white;
         text-transform: uppercase;
@@ -46,7 +50,7 @@ $navbar-light-brand-color: blue;
         position: fixed;
         background-color: white !important;
         // border-bottom: 1px solid black;
-        box-shadow: rgba(0,0, 0, 0.2 ) 0px 2px 2px 0px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px 0px;
         border-width: 0px;
         border-color: rgb(234, 233, 233);
         border-style: solid;
@@ -77,7 +81,10 @@ $navbar-light-brand-color: blue;
     background-color: transparent !important;
     // background-color: rgba(0, 0, 0, 0.4)!important;
 }
-
+.bg-dark {
+    background-color: #141117!important;
+    // background-color: rgba(0, 0, 0, 0.4)!important;
+}
 
 
 
@@ -87,6 +94,19 @@ $navbar-light-brand-color: blue;
 .logo {
     // width: 100px;
     height: 80px;
+}
+
+.inner-banner {
+    // margin-top: 100px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {}
 }
 
 // .main-header {
