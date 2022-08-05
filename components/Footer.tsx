@@ -26,7 +26,7 @@ const Header = () => {
                 </div>
                 <div className=" row wrapper">
                     <div className="col-md-2 d-flex flex-column block">
-                        <Link href="/"><a><Logo className='logo' /></a></Link>
+                        <Link href="/"><a><Logo className='logo-footer' /></a></Link>
                         {/* <Image src={Logo} alt="..." layout={'responsive'} objectFit={'contain'} /> */}
                         {/* <h1 style={{ color: "green" }}> FJ Elagage</h1> */}
                     </div>

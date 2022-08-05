@@ -28,7 +28,7 @@ const Home: NextPage = () => {
       <Header />
 
       <div className='inner-banner' style={{ background: "no-repeat center / cover url('/img/mentions-legales/banner.png')" }}>
-        <h1>Mentions légales</h1>
+        <h1>Contact</h1>
       </div>
 
       <div className="main">

@@ -1,10 +1,10 @@
 import type { NextPage } from 'next';
-import Header from '../components/Header';
+import Header from '../components/HeaderInner';
 import Footer from '../components/Footer';
 import Bottom from '../components/Bottom';
 import Head from 'next/head';
 import Image from 'next/image';
-import wood from "../shared/assets/img/home/elagage1.png";
+// import Banner from "../shared/assets/img/bois-de-chauffage/banner.png";
 import MiniPelle from "../shared/assets/img/home/home-mini-pelle.png";
 import Img2 from "../shared/assets/img/home/bois.jpg";
 import PictoSafely from "../shared/assets/img/home/protection.png";
@@ -25,129 +25,45 @@ const Home: NextPage = () => {
         />
       </Head>
       <Header />
-      <div className='home-banner'>
-        <Image src={wood} alt="..." layout="responsive" objectFit="cover" objectPosition="center" />
-        <h1><span>élagage abattage</span><br /> c'est notre métier !</h1>
-        {/* <div className="banner-title">
-          <h1><span>élagage abattage</span><br /> c'est notre métier !</h1>
-          <p>20 ans d’expérience à votre service</p>
-          <a href="#" className="btn btn-primary">En savoir plus</a>
-        </div> */}
 
-      </div>
-      <a href="#">
-        <div className="container-fluid promotion ">
-          Destockage bois de chauffage - Offre spéciale
-        </div>
-      </a>
-
-      <div className="container-fluid py-m pt-xl">
-        <div className="container row align-items-stretch justify-content-center">
-
-          <div className="col-md-6 order-md-2 mb-m p-m d-flex flex-column justify-content-center">
-            <h2>Elagage au coeur des Landes</h2>
-            <p>L’élagage fait partie de l’entretien courant de votre jardin. Faire appel à une entreprise d‘élagage c’est avant tout <strong>assurer une bonne croissance de vos arbres et arbustes</strong>.<br />Spécialisé depuis 20 ans, en élagage et abatage d’arbres.<br />FJ Elagage vous apporte son savoir-faire. </p>
-            <button type="button" className="btn btn-primary">En savoir plus</button>
-          </div>
-          <div className="col-md-6 order-md-1 mb-md-m pr-0 ">
-            <Image src={wood} alt="..." layout="responsive" objectFit='contain' />
-          </div>
-        </div>
+      <div className='inner-banner' style={{ background: "no-repeat center / cover url('/img/bois-de-chauffage/banner.png')" }}>
+        <h1>Elagage / Abattage</h1>
       </div>
 
-      <div className="container-fluid py-m" style={{ backgroundColor: "white" }}>
-        <div className="container row align-items-stretch justify-content-center">
-
-          <div className="col-md-6 mb-m p-m d-flex flex-column justify-content-center">
-            <h2>Du bois de chauffage livré toute l’année dans les Landes</h2>
-            <p>En tant que professionnel du bois, nous fournissons du bois de chauffage toute l’année.<br />Livré chez vous gratuitement dans la mesure de la proximité.<br />Plusieurs tailles et essences disponibles</p>
-            <button type="button" className="btn btn-primary">Consulter notre offre</button>
-          </div>
-          <div className="col-md-6 mb-md-m pl-0">
-            <Image src={Img2} alt="..." layout="responsive" objectFit='contain' />
+      <div className="main">
+        <div className="container-fluid py-m pt-xl">
+          <div className="container row align-items-stretch justify-content-center">
+            <h2>Éditeur du site</h2>
+            <p>Le site fj-elagage.fr est édité par :</p>
+            <p>Fg Elagage<br></br>1120 route du bourg neuf<br></br>40400 Meilhan - France<br></br>Tél. :<a href="tel:0648182936"> 06 25 52 32 31</a></p>
+            <p>Responsable de la publication : Cécile Robillard</p>
+            <h2>Réalisation et hébergement</h2>
+            <p>Zukah - Agence Digitale<br></br>27 rue du trouilh<br></br>40400 Meilhan<br></br>Tél :<a href="tel:0648182936"> 06 48 18 29 36</a> </p>
+            <h2>Propriété intellectuelle</h2>
+            <p>
+              Le contenu de ce site internet est protégé par les droits de propriété intellectuelle et notamment par le droit d’auteur. Toute reproduction de ces contenus est conditionnée à un accord explicite préalable, en vertu de l'article L.122-4 du Code de la Propriété Intellectuelle.
+            </p>
+            <p>
+              Pour toute demande d'autorisation ou d'information, veuillez nous contacter.
+              </p>
+            <h2>Informations et exclusions</h2>
+            <p>
+              L’éditeur de ce site met en œuvre tous les moyens dont il dispose pour assurer une information fiable et une mise à jour des contenus. Toutefois, des erreurs ou omissions peuvent survenir. L’internaute devra donc s’assurer de l’exactitude des informations auprès de l’éditeur et signaler toutes modifications du site qu’il jugerait utile. L’éditeur du site n’est en aucun cas responsable de l’utilisation faite de ces informations, et de tout préjudice direct ou indirect pouvant en découler.
+              </p>
+            <p>Les photos sont non contractuelles.</p>
+            <p>
+              Les liens hypertextes mis en place dans le cadre du présent site internet en direction d’autres ressources présentes sur le réseau Internet ne sauraient engager la responsabilité de l’éditeur de ce site.
+              </p>
+            <h2>Données personnelles</h2>
+            <p>
+              L’éditeur de ce site s'engage à ce que les traitements de données personnelles qui y sont effectués soient conformes au Règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés.
+              </p>
+            <p>Pour en savoir plus, consultez la page Protection des données personnelles.</p>
           </div>
         </div>
       </div>
-
-      <div className="container-fluid ">
-        {/* <div className="container-fluid" style={{backgroundColor: "rgba(67, 67, 67, 1)"}}> */}
-        <div className="container pictos-container">
-          <div className="col-md-4 picto-container"><Image className="picto" src={PictoSafely} alt="..." layout="responsive" objectFit='contain' /><span className="text">Sécurité</span></div>
-          <div className="col-md-4 picto-container"><Image className="picto" src={PictoReactivite} alt="..." layout="responsive" objectFit='contain' /><span className="text">Sécurité</span></div>
-          <div className="col-md-4 picto-container"><Image className="picto" src={PictoCroissance} alt="..." layout="responsive" objectFit='contain' /><span className="text">Sécurité</span></div>
-        </div>
-      </div>
-
-      <div className="container-fluid" style={{ backgroundColor: "white" }}>
-        <div className="container row align-items-stretch justify-content-center">
-
-          <div className="col-md-6 order-md-2 mb-m p-m d-flex flex-column justify-content-center">
-            <h2>Prestation mini-pelle</h2>
-            <p>L’élagage fait partie de l’entretien courant de votre jardin. Faire appel à une entreprise d‘élagage c’est avant tout <strong>assurer une bonne croissance de vos arbres et arbustes</strong>.<br />Spécialisé depuis 20 ans, en élagage et abatage d’arbres.<br />FJ Elagage vous apporte son savoir-faire. </p>
-            <button type="button" className="btn btn-primary">En savoir plus</button>
-          </div>
-          <div className="col-md-6 order-md-1 mb-md-m pr-0 ">
-            <Image src={MiniPelle} alt="..." layout="responsive" objectFit='contain' />
-          </div>
-        </div>
-      </div>
-
       <Footer />
       <Bottom />
-      {/* <div className="nav"></div> */}
-      {/* <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main> */}
-
-      {/* <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer> */}
     </div>
   )
 }

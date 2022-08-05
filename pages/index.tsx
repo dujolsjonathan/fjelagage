@@ -12,6 +12,7 @@ import Img2 from "../shared/assets/img/home/bois.jpg";
 import PictoSafely from "../shared/assets/img/home/protection.png";
 import PictoReactivite from "../shared/assets/img/home/fusee.png";
 import PictoCroissance from "../shared/assets/img/home/sauver-la-nature.png";
+import PhoneRight from "../components/PhoneRight";
 // import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -27,6 +28,7 @@ const Home: NextPage = () => {
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         />
       </Head>
+      <PhoneRight phone={'0688674630'} phoneString={'06 88 67 46 30'} />
       <Header />
       <div className='home-banner'>
         <Image src={wood} alt="..." layout="responsive" objectFit="cover" objectPosition="center" />
@@ -37,76 +39,78 @@ const Home: NextPage = () => {
         </div>
 
       </div>
-      <a href="#">
+      <a href="/bois-de-chauffage#tarifs-bois">
         <div className="container-fluid promotion ">
           Destockage bois de chauffage - Offre spéciale
         </div>
       </a>
+      <div className="main">
+        <div className="container-fluid py-m" style={{ backgroundColor: "white" }}>
+          <div className="container row align-items-stretch justify-content-center align-items-center">
+            <div className="col-md-3 mb-md-m pr-0 d-flex flex-column justify-content-center">
+              <Image src={Img2} alt="..." layout="responsive" objectFit='contain' />
+            </div>
+            <div className="col-md-9 pl-m d-flex flex-column justify-content-center">
+              <h2>Au service de votre jardin</h2>
+              <p>En tant que professionnel du bois, nous fournissons du bois de chauffage toute l’année. Livré chez vous gratuitement dans la mesure de la proximité.<br />Plusieurs tailles et essences disponibles</p>
+            </div>
 
-      <div className="container-fluid py-m" style={{ backgroundColor: "white" }}>
-        <div className="container row align-items-stretch justify-content-center align-items-center">
-          <div className="col-md-3 mb-md-m pr-0 d-flex flex-column justify-content-center">
-            <Image src={Img2} alt="..." layout="responsive" objectFit='contain' />
-          </div>
-          <div className="col-md-9 pl-m d-flex flex-column justify-content-center">
-            <h2>Au service de votre jardin</h2>
-            <p>En tant que professionnel du bois, nous fournissons du bois de chauffage toute l’année. Livré chez vous gratuitement dans la mesure de la proximité.<br />Plusieurs tailles et essences disponibles</p>
-          </div>
-
-        </div>
-      </div>
-      
-      <div className="container-fluid py-m pt-xl">
-        <div className="container row align-items-stretch justify-content-center">
-
-          <div className="col-md-6 order-md-2 mb-m p-m d-flex flex-column justify-content-center">
-            <h2>Elagage au coeur des Landes</h2>
-            <p>L’élagage fait partie de l’entretien courant de votre jardin. Faire appel à une entreprise d‘élagage c’est avant tout <strong>assurer une bonne croissance de vos arbres et arbustes</strong>.<br />Spécialisé depuis 20 ans, en élagage et abatage d’arbres.<br />FJ Elagage vous apporte son savoir-faire. </p>
-            <Link href="/elagage"><button type="button" className="btn btn-secondary">En savoir plus</button></Link>
-          </div>
-          <div className="col-md-6 order-md-1 mb-md-m pr-0 ">
-            <Image src={wood} alt="..." layout="responsive" objectFit='contain' />
           </div>
         </div>
-      </div>
 
-      <div className="container-fluid py-m" style={{backgroundColor: "white"}}>
-        <div className="container row align-items-stretch justify-content-center">
+        <div className="container-fluid py-m pt-xl">
+          <div className="container row align-items-stretch justify-content-center">
 
-          <div className="col-md-6 mb-m p-m d-flex flex-column justify-content-center">
-            <h2>Du bois de chauffage livré toute l’année dans les Landes</h2>
-            <p>En tant que professionnel du bois, nous fournissons du <strong>bois de chauffage toute l’année</strong>.<br /><strong>Livré chez vous gratuitement</strong> dans la mesure de la proximité.<br />Plusieurs tailles et essences disponibles</p>
-            <button type="button" className="btn btn-secondary">Consulter notre offre</button>
+            <div className="col-md-6 order-md-2 mb-m p-m d-flex flex-column justify-content-center">
+              <h2>Elagage au coeur des Landes</h2>
+              <p>L’élagage fait partie de l’entretien courant de votre jardin. Faire appel à une entreprise d‘élagage c’est avant tout <strong>assurer une bonne croissance de vos arbres et arbustes</strong>.<br />Spécialisé depuis 20 ans, en élagage et abatage d’arbres.<br />FJ Elagage vous apporte son savoir-faire. </p>
+              <Link href="/elagage"><button type="button" className="btn btn-secondary">En savoir plus</button></Link>
+            </div>
+            <div className="col-md-6 order-md-1 mb-md-m pr-0 ">
+              <Image src={wood} alt="..." layout="responsive" objectFit='contain' />
+            </div>
           </div>
-          <div className="col-md-6 mb-md-m pl-0">
-            <Image src={Img2} alt="..." layout="responsive" objectFit='contain' />
+        </div>
+
+        <div className="container-fluid py-m" style={{ backgroundColor: "white" }}>
+          <div className="container row align-items-stretch justify-content-center">
+
+            <div className="col-md-6 mb-m p-m d-flex flex-column justify-content-center">
+              <h2>Du bois de chauffage livré toute l’année dans les Landes</h2>
+              <p>En tant que professionnel du bois, nous fournissons du <strong>bois de chauffage toute l’année</strong>.<br /><strong>Livré chez vous gratuitement</strong> dans la mesure de la proximité.<br />Plusieurs tailles et essences disponibles</p>
+              <Link href="/bois-de-chauffage"><button type="button" className="btn btn-secondary">En savoir plus</button></Link>
+            </div>
+            <div className="col-md-6 mb-md-m pl-0">
+              <Image src={Img2} alt="..." layout="responsive" objectFit='contain' />
+            </div>
+          </div>
+        </div>
+
+        <div className="container-fluid ">
+          {/* <div className="container-fluid" style={{backgroundColor: "rgba(67, 67, 67, 1)"}}> */}
+          <div className="container pictos-container">
+            <div className="col-md-4 picto-container"><Image className="picto" src={PictoSafely} alt="..." layout="responsive" objectFit='contain' /><span className="text">Sécurité</span></div>
+            <div className="col-md-4 picto-container"><Image className="picto" src={PictoReactivite} alt="..." layout="responsive" objectFit='contain' /><span className="text">Sécurité</span></div>
+            <div className="col-md-4 picto-container"><Image className="picto" src={PictoCroissance} alt="..." layout="responsive" objectFit='contain' /><span className="text">Sécurité</span></div>
+          </div>
+        </div>
+
+        <div className="container-fluid" style={{ backgroundColor: "white" }}>
+          <div className="container row align-items-stretch justify-content-center">
+
+            <div className="col-md-6 order-md-2 mb-m p-m d-flex flex-column justify-content-center">
+              <h2>Prestation mini-pelle</h2>
+              <p>L’élagage fait partie de l’entretien courant de votre jardin. Faire appel à une entreprise d‘élagage c’est avant tout <strong>assurer une bonne croissance de vos arbres et arbustes</strong>.<br />Spécialisé depuis 20 ans, en élagage et abatage d’arbres.<br />FJ Elagage vous apporte son savoir-faire. </p>
+              <button type="button" className="btn btn-secondary">En savoir plus</button>
+            </div>
+            <div className="col-md-6 order-md-1 mb-md-m pr-0 ">
+              <Image src={MiniPelle} alt="..." layout="responsive" objectFit='contain' />
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="container-fluid ">
-      {/* <div className="container-fluid" style={{backgroundColor: "rgba(67, 67, 67, 1)"}}> */}
-        <div className="container pictos-container">
-          <div className="col-md-4 picto-container"><Image className="picto" src={PictoSafely} alt="..." layout="responsive" objectFit='contain' /><span className="text">Sécurité</span></div>
-          <div className="col-md-4 picto-container"><Image className="picto" src={PictoReactivite} alt="..." layout="responsive" objectFit='contain' /><span className="text">Sécurité</span></div>
-          <div className="col-md-4 picto-container"><Image className="picto" src={PictoCroissance} alt="..." layout="responsive" objectFit='contain' /><span className="text">Sécurité</span></div>
-        </div>
-      </div>
 
-      <div className="container-fluid" style={{backgroundColor: "white"}}>
-        <div className="container row align-items-stretch justify-content-center">
-
-          <div className="col-md-6 order-md-2 mb-m p-m d-flex flex-column justify-content-center">
-            <h2>Prestation mini-pelle</h2>
-            <p>L’élagage fait partie de l’entretien courant de votre jardin. Faire appel à une entreprise d‘élagage c’est avant tout <strong>assurer une bonne croissance de vos arbres et arbustes</strong>.<br />Spécialisé depuis 20 ans, en élagage et abatage d’arbres.<br />FJ Elagage vous apporte son savoir-faire. </p>
-            <button type="button" className="btn btn-secondary">En savoir plus</button>
-          </div>
-          <div className="col-md-6 order-md-1 mb-md-m pr-0 ">
-            <Image src={MiniPelle} alt="..." layout="responsive" objectFit='contain' />
-          </div>
-        </div>
-      </div>
-       
       <Footer />
       <Bottom />
       {/* <div className="nav"></div> */}

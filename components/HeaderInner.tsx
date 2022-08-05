@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import Top from './Top';
 import Logo from '../shared/assets/img/header/logo.svg';
 
 const Header = () => {
@@ -23,7 +24,7 @@ const Header = () => {
             setScroll(false);
         }
     };
-    
+
     useEffect(() => {
         window.addEventListener("scroll", checkScroll);
         return () => {
@@ -31,30 +32,34 @@ const Header = () => {
         };
     }, []);
     return (
-        <nav className={`navbar navbar-expand-lg navbar-light bg-dark ${scroll ? "stickyheader" : ""}`}>
-            <div className="container">
-                <Link href="/"><a><Logo className='logo' /></a></Link>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="nav navbar-nav ms-auto navbar-nav-scroll">
-                        <li className="nav-item">
-                            <Link href="/elagage"><a className="nav-link" >Élagage</a></Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link href="/bois-de-chauffage"><a className="nav-link" >Bois de chauffage</a></Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link href="/mini-pelle"><a className="nav-link" >Mini-pelle</a></Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link href="/contact"><a className="nav-link" >Contact</a></Link>
-                        </li>
-                    </ul>
+        <>
+            <Top />
+            <nav className={`navbar navbar-expand-lg navbar-light bg-dark ${scroll ? "stickyheader" : ""}`}>
+                <div className="container">
+                    <Link href="/"><a><Logo className='logo' /></a></Link>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul className="nav navbar-nav ms-auto navbar-nav-scroll">
+                            <li className="nav-item">
+                                <Link href="/elagage"><a className="nav-link" >Élagage</a></Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link href="/bois-de-chauffage"><a className="nav-link" >Bois de chauffage</a></Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link href="/mini-pelle"><a className="nav-link" >Mini-pelle</a></Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link href="/contact"><a className="nav-link" >Contact</a></Link>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </>
+
         // <div className='container main-header'>
         //     <div className="row">
         //         <Logo className='logo' />

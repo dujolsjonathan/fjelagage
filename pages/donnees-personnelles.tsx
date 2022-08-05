@@ -27,7 +27,7 @@ const Home: NextPage = () => {
       <Header />
       <div className='home-banner'>
         <Image src={wood} alt="..." layout="responsive" objectFit="cover" objectPosition="center" />
-        <h1><span>élagage abattage</span><br /> c'est notre métier !</h1>
+        <h1><span>élagage abattage</span><br /> c&#x27;est notre métier !</h1>
         {/* <div className="banner-title">
           <h1><span>élagage abattage</span><br /> c'est notre métier !</h1>
           <p>20 ans d’expérience à votre service</p>

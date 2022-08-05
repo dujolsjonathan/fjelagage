@@ -1,0 +1,44 @@
+table{
+    &.tarifs{
+        thead{
+            tr{
+
+            }
+            th{
+                border-bottom: 1px solid white;
+                border-right: 1px solid white;
+                padding: 5px 10px;
+                background-color: $secondary-color;
+                color: white;
+                text-transform: uppercase;
+                font-style: italic;
+            }
+            th:not(:first-child){
+                text-align: center;
+            }
+        }
+        tbody{
+            tr{
+
+            }
+            td{
+                border: 1px solid #89888B;
+                padding-left: 10px;
+                background-color: #4E4C50;
+                color: white;
+                text-transform: uppercase;
+                
+            }
+            td:not(:first-child){
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.6rem;
+                color: $brand-color;
+                border-right: 1px solid #89888B;
+                border-bottom: 1px solid #89888B;
+                background-color: white;
+                font-style: italic;
+            }
+        }
+    }
+}

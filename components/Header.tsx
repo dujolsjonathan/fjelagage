@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import Top from './Top';
 import Logo from '../shared/assets/img/header/logo.svg';
 
 const Header = () => {
@@ -31,6 +32,8 @@ const Header = () => {
         };
     }, []);
     return (
+        <>
+        <Top />
         <nav className={`navbar navbar-expand-lg navbar-light bg-light navbar-absolute ${scroll ? "stickyheader" : ""}`}>
             <div className="container">
                 <Link href="/"><a><Logo className='logo' /></a></Link>
@@ -55,6 +58,7 @@ const Header = () => {
                 </div>
             </div>
         </nav>
+        </>
         // <div className='container main-header'>
         //     <div className="row">
         //         <Logo className='logo' />

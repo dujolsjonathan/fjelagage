@@ -71,10 +71,14 @@ $footer-bg-color: #141117;
 
         }
     }
-    .logo{
+    .logo-footer{
         
         height: 200px;
         // margin: auto;
+        .cls-1{
+            fill: $brand-color;
+        }
+        
         margin-top: -45px;
         @include md {
             margin-top: 0;

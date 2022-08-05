@@ -24,10 +24,13 @@
 
 // 5. Components
 @import
+  'components/phone-right',
+  'components/tarifs',
   'components/button';
 
 // 6. Page-specific styles
 @import
+  'pages/bois-de-chauffage',
   'pages/home';
 
 // 7. Themes
