@@ -1,19 +1,50 @@
 import type { NextPage } from 'next';
+import { useState } from "react";
 import Link from 'next/link';
 import Header from '../components/HeaderInner';
 import Footer from '../components/Footer';
 import Bottom from '../components/Bottom';
 import Head from 'next/head';
-import Image from 'next/image';
-import Banner from "../shared/assets/img/mentions-legales/banner.png";
-import MiniPelle from "../shared/assets/img/home/home-mini-pelle.png";
-import Img2 from "../shared/assets/img/home/bois.jpg";
-import PictoSafely from "../shared/assets/img/home/protection.png";
-import PictoReactivite from "../shared/assets/img/home/fusee.png";
-import PictoCroissance from "../shared/assets/img/home/sauver-la-nature.png";
-// import styles from '../styles/Home.module.css'
-
+import PhoneRight from "../components/PhoneRight";
+import ContactModal from "../components/ContactModal";
 const Home: NextPage = () => {
+
+  const [firstname, setFirstname] = useState('');
+  const [lastname, setLastname] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
+  const [isSentEmail, setIsSentEmail] = useState(true);
+  const [isOpenModal, setIsOpenModal] = useState(true);
+
+  const submitContact = async (event: SubmitEvent) => {
+
+    event.preventDefault();
+
+    try {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_MAIL_SERVER}/api/fjelagage/contact`, {
+        body: JSON.stringify({
+          firstname,
+          lastname,
+          email,
+          phone,
+          message
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      });
+    } catch (error) {
+      if (error) {
+        console.log(error);
+        setIsSentEmail(false)
+        return;
+      }
+    }
+    setIsOpenModal(true)
+  };
+
   return (
     <div className='wrapper'>
       <Head>
@@ -25,41 +56,108 @@ const Home: NextPage = () => {
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         />
       </Head>
+      <PhoneRight phone={'0688674630'} phoneString={'06 88 67 46 30'} />
+
+      {isOpenModal && (
+        <ContactModal
+          phone={'0688674630'}
+          phoneString={'06 88 67 46 30'}
+          isSentEmail={isSentEmail}
+          closeModal={() => setIsOpenModal(false)}
+        />
+      )}
+
       <Header />
 
       <div className='inner-banner' style={{ background: "no-repeat center / cover url('/img/mentions-legales/banner.png')" }}>
         <h1>Contact</h1>
+        <i className="fas fa-home"></i>
       </div>
 
       <div className="main">
         <div className="container-fluid py-m pt-xl">
-          <div className="container row align-items-stretch justify-content-center">
-            <h2>Éditeur du site</h2>
-            <p>Le site fj-elagage.fr est édité par :</p>
-            <p>Fg Elagage<br></br>1120 route du bourg neuf<br></br>40400 Meilhan - France<br></br>Tél. :<a href="tel:0648182936"> 06 25 52 32 31</a></p>
-            <p>Responsable de la publication : Cécile Robillard</p>
-            <h2>Réalisation et hébergement</h2>
-            <p>Zukah - Agence Digitale<br></br>27 rue du trouilh<br></br>40400 Meilhan<br></br>Tél :<a href="tel:0648182936"> 06 48 18 29 36</a> </p>
-            <h2>Propriété intellectuelle</h2>
-            <p>
-              Le contenu de ce site internet est protégé par les droits de propriété intellectuelle et notamment par le droit d’auteur. Toute reproduction de ces contenus est conditionnée à un accord explicite préalable, en vertu de l'article L.122-4 du Code de la Propriété Intellectuelle.
-            </p>
-            <p>
-              Pour toute demande d'autorisation ou d'information, veuillez nous contacter.
-              </p>
-            <h2>Informations et exclusions</h2>
-            <p>
-              L’éditeur de ce site met en œuvre tous les moyens dont il dispose pour assurer une information fiable et une mise à jour des contenus. Toutefois, des erreurs ou omissions peuvent survenir. L’internaute devra donc s’assurer de l’exactitude des informations auprès de l’éditeur et signaler toutes modifications du site qu’il jugerait utile. L’éditeur du site n’est en aucun cas responsable de l’utilisation faite de ces informations, et de tout préjudice direct ou indirect pouvant en découler.
-              </p>
-            <p>Les photos sont non contractuelles.</p>
-            <p>
-              Les liens hypertextes mis en place dans le cadre du présent site internet en direction d’autres ressources présentes sur le réseau Internet ne sauraient engager la responsabilité de l’éditeur de ce site.
-              </p>
-            <h2>Données personnelles</h2>
-            <p>
-              L’éditeur de ce site s'engage à ce que les traitements de données personnelles qui y sont effectués soient conformes au Règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés.
-              </p>
-            <p>Pour en savoir plus, consultez la page Protection des données personnelles.</p>
+          <div className="container row align-items-flex-start justify-content-center">
+            <div className="col-md-4 mb-m p-m d-flex flex-column justify-content-flex-start">
+              <h3>FJ Elagage</h3>
+              <p>1120 route du bourg neuf<br></br>40400 Meilhan</p>
+              <Link href="tel:0688674630"><button type="button" className="btn btn-secondary">06 88 67 46 30</button></Link>
+              <span>Email: <Link href="mailto:jeremiefaure@gmail.com">jeremiefaure@gmail.com</Link></span>
+            </div>
+            <div className="col-md-8 p-m mb-md-m pl-0">
+              <form className="d-flex flex-column" onSubmit={submitContact}>
+                <label htmlFor="name" className="mb-2 italic">Nom<span>*</span></label>
+                <input
+                  className="mb-4 p-xs border-b-2"
+                  id="name"
+                  name="lastname"
+                  value={lastname}
+                  onChange={(e) => {
+                    setLastname(e.target.value)
+                  }}
+                  type="text"
+                  autoComplete="name"
+                  required
+                />
+                <label htmlFor="name" className="mb-2 italic">Prénom<span>*</span></label>
+                <input
+                  className="mb-4 p-xs border-b-2"
+                  id="name"
+                  name="name"
+                  value={firstname}
+                  onChange={(e) => {
+                    setFirstname(e.target.value)
+                  }}
+                  type="text"
+                  autoComplete="name"
+                  required
+                />
+                <label htmlFor="name" className="mb-2 italic">Email<span>*</span></label>
+                <input
+                  className="mb-4 p-xs border-b-2"
+                  id="name"
+                  name="name"
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value)
+                  }}
+                  type="email"
+                  autoComplete="name"
+                  required
+                />
+                <label htmlFor="name" className="mb-2 italic">Téléphone<span>*</span></label>
+                <input
+                  className="mb-4 p-xs border-b-2"
+                  id="name"
+                  name="name"
+                  type="phone"
+                  value={phone}
+                  onChange={(e) => {
+                    setPhone(e.target.value)
+                  }}
+                  autoComplete="name"
+                  required
+                />
+                <label htmlFor="name" className="mb-2 italic">Message<span>*</span></label>
+                <input
+                  className="mb-4 p-xs border-b-2"
+                  id="name"
+                  name="name"
+                  type="textarea"
+                  value={message}
+                  onChange={(e) => {
+                    setMessage(e.target.value)
+                  }}
+                  autoComplete="name"
+                  required
+                />
+                <button
+                  type="submit"
+                  className="btn btn-secondary"
+                >
+                  Envoyer
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>

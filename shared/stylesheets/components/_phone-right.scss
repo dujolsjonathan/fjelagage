@@ -17,7 +17,7 @@
         margin-bottom: 0;
         padding: 10px;
         margin-right: 50px;
-        font-weight: 300;
+        font-weight: 500;
         font-size: 20px;
     }
     i{
@@ -26,8 +26,9 @@
     }
     &:hover{
         transition: 0.4s;
-        color: $secondary-color;
+        color: white;
+        background-color: $brand-color;
         right: -50px;
-        box-shadow: 0px 0px 10px 4px rgba(15, 62, 27, 0.2);
+        // box-shadow: 0px 0px 10px 4px rgba(15, 62, 27, 0.2);
     }
 }

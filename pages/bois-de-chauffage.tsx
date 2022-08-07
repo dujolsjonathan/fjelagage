@@ -14,6 +14,7 @@ import PictoCourt from "../shared/assets/img/bois-de-chauffage/court.svg";
 import PictoDurable from "../shared/assets/img/bois-de-chauffage/durable.svg";
 import PictoLocal from "../shared/assets/img/bois-de-chauffage/local.svg";
 import PictoRenouvelable from "../shared/assets/img/bois-de-chauffage/renouvelable.svg";
+import PhoneRight from "../components/PhoneRight";
 // import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -28,6 +29,7 @@ const Home: NextPage = () => {
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         />
       </Head>
+      <PhoneRight phone={'0688674630'} phoneString={'06 88 67 46 30'} />
       <Header />
 
       <div className='inner-banner' style={{ background: "no-repeat center / cover url('/img/bois-de-chauffage/banner.png')" }}>
@@ -143,8 +145,8 @@ const Home: NextPage = () => {
               <h3>Livraison</h3>
               <p><strong>La livraison est gratuite</strong> dans un périmètre acceptable.</p>
               <p>Compte tenu des cours actuels, <strong>nous ne livrons pas moins de 5 stères</strong>.</p>
-              <p>Pour plus d’infos, merci de <Link href="/contact">nous contacter</Link></p>
-              {/* <Link href="/elagage"><button type="button" className="btn btn-secondary">En savoir plus</button></Link> */}
+              {/* <p>Pour plus d’infos, merci de <Link href="/contact">nous contacter</Link></p> */}
+              <Link href="/contact"><button type="button" className="btn btn-secondary">Je réserve</button></Link>
             </div>
           </div>
         </div>

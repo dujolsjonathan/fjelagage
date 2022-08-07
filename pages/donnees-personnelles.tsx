@@ -10,6 +10,7 @@ import Img2 from "../shared/assets/img/home/bois.jpg";
 import PictoSafely from "../shared/assets/img/home/protection.png";
 import PictoReactivite from "../shared/assets/img/home/fusee.png";
 import PictoCroissance from "../shared/assets/img/home/sauver-la-nature.png";
+import PhoneRight from "../components/PhoneRight";
 // import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -24,6 +25,7 @@ const Home: NextPage = () => {
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         />
       </Head>
+      <PhoneRight phone={'0688674630'} phoneString={'06 88 67 46 30'} />
       <Header />
       <div className='home-banner'>
         <Image src={wood} alt="..." layout="responsive" objectFit="cover" objectPosition="center" />
