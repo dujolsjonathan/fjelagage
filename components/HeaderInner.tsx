@@ -34,7 +34,7 @@ const Header = () => {
     return (
         <>
             <Top />
-            <nav className={`navbar navbar-expand-lg navbar-light bg-dark ${scroll ? "stickyheader" : ""}`}>
+            <nav className={`navbar navbar-expand-lg ${!scroll ? "navbar-dark" : ""} bg-dark ${scroll ? "stickyheader navbar-light" : ""}`}>
                 <div className="container">
                     <Link href="/"><a><Logo className='logo' /></a></Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

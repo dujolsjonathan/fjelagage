@@ -7,12 +7,12 @@ const Top = () => {
 
     return (
         <div className="container-fluid top">
-            <div className='container'>
+            <div className='container px-0'>
                 <div className="left ">
                     <a className="pl-xs" href="tel:0688674630"><i className="fa fa-phone"></i>06 88 67 46 30</a>
                 </div>
                 <div className="right">
-                    <a href="https://www.facebook.com/SARL-FAURE-417324348795353"><i className="fab fa-facebook-f fa-2xl"></i></a>
+                    <a className="pr-xs" href="https://www.facebook.com/SARL-FAURE-417324348795353"><i className="fab fa-facebook-f fa-2xl"></i></a>
                 </div>
             </div>
         </div>

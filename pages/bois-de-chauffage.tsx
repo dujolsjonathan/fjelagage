@@ -45,9 +45,9 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-        <div className="container-fluid py-m pt-xl">
-          <div className="container row align-items-stretch justify-content-center">
-            <div className="col-md-8 order-md-2 mb-m p-m d-flex flex-column justify-content-center">
+        <div className="container-fluid py-m">
+          <div className="container row align-items-center justify-content-center">
+            <div className="col-md-8 order-md-2 mb-m ps-md-5 d-flex flex-column justify-content-center">
               <h2>Les avantages du bois de chauffage</h2>
               <p>Malgré une augmentation générale des prix, le bois de chauffage reste plus économique que le gaz, l’électrique ou le fioul. Le bois a le <strong>prix du combustible le plus bas du marché</strong>.</p>
               <p>La chaleur qu’il procure apporte un environnement plus chaleureux à votre foyer.
@@ -62,7 +62,7 @@ const Home: NextPage = () => {
         </div>
 
         <div className="container-fluid d-flex flex-column mb-m">
-          <span style={{ textAlign: 'center' }}>Le circuit est :</span>
+          <span style={{ textAlign: 'center', fontSize: '20px' }}>Le circuit est :</span>
           <div className="container pictos-wood">
             <div className="col-md-3 d-flex justify-content-center align-items-center picto-container"><PictoCourt className="picto" /><span className="text">Court</span></div>
             <div className="col-md-3 d-flex justify-content-center align-items-center picto-container"><PictoLocal className="picto" /><span className="text">Local</span></div>
@@ -71,10 +71,10 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <div className="container-fluid py-m pt-xl">
-          <div className="container row align-items-stretch justify-content-center">
+        <div className="container-fluid py-m">
+          <div className="container row align-items-center justify-content-center">
 
-            <div className="col-md-6 order-md-2 mb-m p-m d-flex flex-column justify-content-center">
+            <div className="col-md-6 order-md-2 mb-m ps-md-5  d-flex flex-column justify-content-center">
               <h2>Le chêne</h2>
               <p>C’est l’<strong>essence noble de nos forêts</strong>. C’est également celle de nos cheminées !
                 Particulièrement recherché pour alimenter nos foyers, le chêne a la réputation de <strong>se consommer plus lentement que les autres essences</strong>, ce qui lui confère un <strong>pouvoir calorifique important</strong>. </p>
@@ -86,9 +86,9 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div className="container-fluid py-m pb-0">
-          <div className="container row align-items-stretch justify-content-center">
+          <div className="container row align-items-center justify-content-center">
 
-            <div className="col-md-6 order-md-1 p-m d-flex flex-column justify-content-center">
+            <div className="col-md-6 order-md-1 mb-m pe-md-5  d-flex flex-column justify-content-center">
               <h2>Le mélange</h2>
               <p><strong>Moins coûteux que le chêne mais tout aussi efficace</strong>, le mélange a la particularité de combiner différentes essences de bois.</p>
 
@@ -108,10 +108,10 @@ const Home: NextPage = () => {
         <div className="container-fluid py-m" id="tarifs-bois">
           <div className="container row align-items-stretch justify-content-start">
 
-            <div className="col-md-12 order-md-1 pl-m d-flex flex-column justify-content-center">
+            <div className="col-md-12 order-md-1 d-flex flex-column justify-content-center">
               <h2>Tarifs</h2>
             </div>
-            <div className="col-md-6 order-md-1 p-m pt-0 pb-0 d-flex flex-column justify-content-flex-start">
+            <div className="col-md-6 order-md-1 px-m pt-0 pb-m d-flex flex-column justify-content-flex-start">
 
               <h3>Nos tarifs actuels</h3>
               <table className="tarifs">
@@ -141,7 +141,7 @@ const Home: NextPage = () => {
                 </tbody>
               </table>
             </div>
-            <div className="col-md-6 order-md-1 mb-m p-m pt-0 pb-0 d-flex flex-column justify-content-center">
+            <div className="col-md-6 order-md-1  ps-md-5  d-flex flex-column justify-content-center">
               <h3>Livraison</h3>
               <p><strong>La livraison est gratuite</strong> dans un périmètre acceptable.</p>
               <p>Compte tenu des cours actuels, <strong>nous ne livrons pas moins de 5 stères</strong>.</p>
@@ -152,9 +152,9 @@ const Home: NextPage = () => {
         </div>
 
         <div className="container-fluid">
-          <div className="container row  justify-content-center">
+          <div className="container row pb-m justify-content-center">
 
-            <div className="col-md-6 order-md-1 mb-m p-m d-flex flex-column ">
+            <div className="col-md-6 order-md-1 pe-md-5 d-flex flex-column ">
               <h3>Calculer un stère de bois</h3>
               <p>Un stère correspond à 1m3 de bois coupé en 1m. <strong>Plus la taille des buches est petite, plus la taille de la stère est petite</strong> car les buches s’agencent mieux entre elle.</p>
               <p><strong>La quantité de bois reste la même</strong>.</p>
@@ -166,7 +166,7 @@ const Home: NextPage = () => {
               </ul>
               {/* <Link href="/elagage"><button type="button" className="btn btn-secondary">En savoir plus</button></Link> */}
             </div>
-            <div className="col-md-6 order-md-1 mb-m p-m d-flex flex-column justify-content-flex-start">
+            <div className="col-md-6 order-md-1 pt-m mb-m ps-md-5  d-flex flex-column justify-content-flex-start">
 
               <p>Tableau des coefficients</p>
               <table className="tarifs">

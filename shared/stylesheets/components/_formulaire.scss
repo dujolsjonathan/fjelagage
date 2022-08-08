@@ -1,8 +1,18 @@
 form{
+   
     textarea{
         height: 150px;
     }
     input{
+        border: 1px solid rgba(0,0,0,.2);
+        padding: 10px;
+        line-height: 1.2rem;
+        font-family: 'Open Sans';
+        // text-align: justify;
+        font-weight: 300;
+        &:hover{
+            border: 1px solid rgba(0,0,0,.6);
+        }
         &:focus-visible{
             outline-color: $brand-color;
         }
@@ -11,5 +21,20 @@ form{
         span{
             color: red
         }
+        margin-bottom: 0!important;
+        line-height: 1.2rem;
+        font-family: 'Open Sans';
+        // text-align: justify;
+        font-weight: 300;
+    }
+    #message{
+        min-height: 150px;
+    }
+    .checkbox-container{
+        padding: 20px;
+        border: 1px solid rgba(0,0,0,.2);
+    }
+    .btn{
+        width: 100%;
     }
 }

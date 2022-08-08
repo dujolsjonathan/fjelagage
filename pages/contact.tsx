@@ -15,7 +15,7 @@ const Home: NextPage = () => {
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
   const [isSentEmail, setIsSentEmail] = useState(true);
-  const [isOpenModal, setIsOpenModal] = useState(true);
+  const [isOpenModal, setIsOpenModal] = useState(false);
 
   const submitContact = async (event: SubmitEvent) => {
 
@@ -77,79 +77,96 @@ const Home: NextPage = () => {
       <div className="main">
         <div className="container-fluid py-m pt-xl">
           <div className="container row align-items-flex-start justify-content-center">
-            <div className="col-md-4 mb-m p-m d-flex flex-column justify-content-flex-start">
+            <div className="col-md-4 px-0 mb-m d-flex flex-column justify-content-flex-start">
               <h3>FJ Elagage</h3>
               <p>1120 route du bourg neuf<br></br>40400 Meilhan</p>
               <Link href="tel:0688674630"><button type="button" className="btn btn-secondary">06 88 67 46 30</button></Link>
               <span>Email: <Link href="mailto:jeremiefaure@gmail.com">jeremiefaure@gmail.com</Link></span>
             </div>
-            <div className="col-md-8 p-m mb-md-m pl-0">
+            <div className="col-md-8 p-m mb-md-m px-0">
               <form className="d-flex flex-column" onSubmit={submitContact}>
-                <label htmlFor="name" className="mb-2 italic">Nom<span>*</span></label>
+                <label htmlFor="lastname" className="mb-1 italic">Nom<span>*</span></label>
                 <input
                   className="mb-4 p-xs border-b-2"
-                  id="name"
+                  id="lastname"
                   name="lastname"
                   value={lastname}
                   onChange={(e) => {
                     setLastname(e.target.value)
                   }}
                   type="text"
-                  autoComplete="name"
+                  autoComplete="lastname"
                   required
                 />
-                <label htmlFor="name" className="mb-2 italic">Prénom<span>*</span></label>
+                <label htmlFor="firstname" className="mb-1 italic">Prénom<span>*</span></label>
                 <input
                   className="mb-4 p-xs border-b-2"
-                  id="name"
-                  name="name"
+                  id="firstname"
+                  name="firstname"
                   value={firstname}
                   onChange={(e) => {
                     setFirstname(e.target.value)
                   }}
                   type="text"
-                  autoComplete="name"
+                  autoComplete="firstname"
                   required
                 />
-                <label htmlFor="name" className="mb-2 italic">Email<span>*</span></label>
+                <label htmlFor="email" className="mb-1 italic">Email<span>*</span></label>
                 <input
                   className="mb-4 p-xs border-b-2"
-                  id="name"
-                  name="name"
+                  id="email"
+                  name="email"
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value)
                   }}
                   type="email"
-                  autoComplete="name"
+                  autoComplete="email"
                   required
                 />
-                <label htmlFor="name" className="mb-2 italic">Téléphone<span>*</span></label>
+                <label htmlFor="phone" className="mb-1 italic">Téléphone<span>*</span></label>
                 <input
                   className="mb-4 p-xs border-b-2"
-                  id="name"
-                  name="name"
+                  id="phone"
+                  name="phone"
                   type="phone"
                   value={phone}
                   onChange={(e) => {
                     setPhone(e.target.value)
                   }}
-                  autoComplete="name"
+                  autoComplete="phone"
                   required
                 />
-                <label htmlFor="name" className="mb-2 italic">Message<span>*</span></label>
+                <label htmlFor="message" className="mb-1 italic">Message<span>*</span></label>
                 <input
                   className="mb-4 p-xs border-b-2"
-                  id="name"
-                  name="name"
+                  id="message"
+                  name="message"
                   type="textarea"
                   value={message}
                   onChange={(e) => {
                     setMessage(e.target.value)
                   }}
-                  autoComplete="name"
+                  autoComplete="message"
                   required
                 />
+                <div className="checkbox-container d-flex align-items-start">
+                  <input
+                    className="mt-1 p-xs border-b-2"
+                    id="checkbox"
+                    name="checkbox"
+                    type="checkbox"
+                    value={message}
+                    onChange={(e) => {
+                      setMessage(e.target.value)
+                    }}
+
+                    // autoComplete="message"
+                    required
+                  />
+                  <label htmlFor="checkbox" className=" pl-xs italic">En soumettant ce formulaire, j'accepte que les informations saisies dans ce formulaire soient utilisées, exploitées, traitées pour permettre de me recontacter.<br></br>Consulter notre <Link href="/mentions-legales">politique de confidentialité</Link></label>
+                </div>
+
                 <button
                   type="submit"
                   className="btn btn-secondary"
