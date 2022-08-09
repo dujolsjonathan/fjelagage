@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Header from '../components/Header';
-
 import Head from 'next/head';
 import Image from 'next/image';
 import wood from "../shared/assets/img/home/elagage1.png";
@@ -11,10 +10,27 @@ import Img2 from "../shared/assets/img/home/bois.jpg";
 import PictoSafety from "../shared/assets/img/home/safety.svg";
 import PictoReactivity from "../shared/assets/img/home/reactivity.svg";
 import PictoGrow from "../shared/assets/img/home/grow.svg";
+import { motion, useAnimation } from "framer-motion";
+
+import { useInView } from "react-intersection-observer";
+
 // import styles from '../styles/Home.module.css'
 
-const Home: NextPage = () => {
+const Home: NextPage = ({ informations }: any) => {
 
+  console.log(informations)
+
+  const control = useAnimation()
+  const [ref, inView] = useInView()
+  const boxVariant = {
+    visible: { opacity: 1, transition: { duration: 0.8 } },
+    hidden: { opacity: 0 },
+  }
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    }
+  }, [control, inView]);
   return (
     <div className='wrapper'>
       <Head>
@@ -26,7 +42,7 @@ const Home: NextPage = () => {
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         />
       </Head>
-      
+
       <Header />
       <div className='home-banner'>
         <Image src={wood} alt="..." layout="responsive" objectFit="contain" objectPosition="center" />
@@ -52,7 +68,10 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <div className="container-fluid py-md-4">
+        <motion.div className="container-fluid py-md-4" ref={ref}
+          variants={boxVariant}
+          initial="hidden"
+          animate={control}>
           <div className="container row align-items-stretch justify-content-center">
 
             <div className="col-md-6 order-md-2 mb-m ps-md-5 d-flex flex-column justify-content-center">
@@ -64,9 +83,15 @@ const Home: NextPage = () => {
               <Image src={wood} alt="..." layout="responsive" objectFit='contain' />
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="container-fluid py-md-4" style={{ backgroundColor: "white" }}>
+        <motion.div
+          className="container-fluid py-md-4"
+          style={{ backgroundColor: "white" }}
+          ref={ref}
+          variants={boxVariant}
+          initial="hidden"
+          animate={control}>
           <div className="container row align-items-stretch justify-content-center">
 
             <div className="col-md-6 mb-m pe-md-5  d-flex flex-column justify-content-center">
@@ -78,15 +103,18 @@ const Home: NextPage = () => {
               <Image src={Img2} alt="..." layout="responsive" objectFit='contain' />
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="container-fluid d-flex flex-column py-md-4">
+        <motion.div className="container-fluid d-flex flex-column py-md-4" ref={ref}
+          variants={boxVariant}
+          initial="hidden"
+          animate={control}>
           <div className="container pictos-wood">
             <div className="col-md-3 d-flex justify-content-center align-items-center picto-container"><PictoSafety className="picto" /><span className="text">Sécurité</span></div>
             <div className="col-md-3 d-flex justify-content-center align-items-center picto-container"><PictoReactivity className="picto" /><span className="text">Réactivité</span></div>
             <div className="col-md-3 d-flex justify-content-center align-items-center picto-container"><PictoGrow className="picto" /><span className="text">Croissance</span></div>
           </div>
-        </div>
+        </motion.div>
 
         <div className="container-fluid py-md-3" style={{ backgroundColor: "white" }}>
           <div className="container row align-items-stretch justify-content-center">
@@ -102,65 +130,17 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-
-
-      
-      {/* <div className="nav"></div> */}
-      {/* <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main> */}
-
-      {/* <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer> */}
     </div>
   )
 }
+
+// export async function getStaticProps() {
+//   const res = await fetch("http://localhost:1337/api/information");
+//   const informations = await res.json();
+// console.log(informations)
+//   return {
+//     props: { informations },
+//   };
+// }
 
 export default Home

@@ -5,11 +5,12 @@ import '../styles/globals.css'
 import '../shared/stylesheets/main.scss';
 import PhoneRight from "../components/PhoneRight";
 import Footer from '../components/Footer';
+
 import Bottom from '../components/Bottom';
 
 import type { AppProps } from 'next/app'
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps, informations }: AppProps) {
   return (
     <>
       <Head>
@@ -35,5 +36,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     </>
   );
 }
+
+
 
 export default MyApp

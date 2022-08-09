@@ -8,7 +8,6 @@ import Logo from '../shared/assets/img/header/logo.svg';
 const Header = () => {
 
     const router = useRouter();
-    console.log(router)
     const [scroll, setScroll] = useState(false);
 
     const checkScroll = () => {
