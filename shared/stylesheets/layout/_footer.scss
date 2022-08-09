@@ -34,7 +34,7 @@ $footer-bg-color: #141117;
     .wrapper {
         max-width: $max-width;
         margin: auto;
-        padding: 40px 0;
+        padding: 40px 0 00px;
 
         @include md {
             padding: 0;

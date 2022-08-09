@@ -29,7 +29,6 @@ const Home: NextPage = () => {
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         />
       </Head>
-      <PhoneRight phone={'0688674630'} phoneString={'06 88 67 46 30'} />
       <Header />
 
       <div className='inner-banner' style={{ background: "no-repeat center / cover url('/img/bois-de-chauffage/banner.png')" }}>
@@ -45,9 +44,9 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <div className="container-fluid py-m pb-0">
+        <div className="container-fluid py-md-3 ">
           <div className="container row align-items-stretch justify-content-center">
-            <div className="col-md-8 order-md-2 p-m  d-flex flex-column justify-content-center">
+            <div className="col-md-8 order-md-2 mb-m ps-md-5 d-flex flex-column justify-content-center">
               <h2>Pourquoi faire appel à un professionnel ?</h2>
               <p>Se lancer seul dans une opération d’élagage peut s’avérer <strong>complexe et dangereux</strong>. Spécialement outillé, <Link href="/">FJ Elagage</Link> apporte son savoir faire de manière <strong>sécurisé</strong>. Entretien régulier, arbre difficile d’accès ou menaçant... nous mettons à votre service nos <strong>20 ans d’expérience</strong>. En fonction de la situation, il est possible d’utiliser soit une <strong>nacelle</strong>, ou bien directement à la <strong>grimpe</strong>.</p>
               <p>Le choix de la période est cruciale. Un professionnel vous orientera rapidement sur la période la plus propice à la bonne défense de l’arbre. </p>
@@ -60,9 +59,9 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className="container-fluid py-m pb-0">
+        <div className="container-fluid ">
           <div className="container row align-items-center justify-content-center">
-            <div className="col-md-6 order-md-1 p-m d-flex flex-column justify-content-center">
+            <div className="col-md-6 order-md-1 mb-m pe-md-5 d-flex flex-column justify-content-center">
               <h2>Pour les particuliers</h2>
               <p>Nous intervenons principalement chez les particuliers. </p>
               <p>Difficulté d’accès, câble électrique, clôture… on s’adapte… c’est notre métier !</p>
@@ -77,14 +76,14 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className="container-fluid py-m pb-0">
+        <div className="container-fluid py-md-3">
           <div className="container row align-items-center justify-content-center">
-            <div className="col-md-7 order-md-2  p-m d-flex flex-column justify-content-center">
+            <div className="col-md-7 order-md-2 mb-m ps-md-5 d-flex flex-column justify-content-center">
               <h2>Pour les entreprises et services publics</h2>
               <p>FJ Elagage intervient rapidement en urgence.</p>
               <p>Bord de route, ripisilve ou bien travaux sur parcelle, nous sommes outillés pour agir directement sur des terrains plus hostiles. </p>
               <p>De l’abattage au débardage, Fj Elagage est autonome et répondra toujours dans le respect de vos conditions.</p>
-              <p>Également équipé d’une pelle mécanique, il est possible de croiser différentes demandes :</p>
+              <p>Également équipé d’une <Link href='/mini-pelle'>pelle mécanique</Link>, il est possible de croiser différentes demandes :</p>
               <ul>
                 <li>renforcement de digue</li>
                 <li>DEMANDER a jrm</li>
@@ -100,7 +99,7 @@ const Home: NextPage = () => {
 
         <div className="container-fluid ">
           <div className="container row align-items-stretch justify-content-center">
-            <div className="col-md-12 order-md-2  p-m d-flex flex-column justify-content-center">
+            <div className="col-md-12 order-md-2  mb-m d-flex flex-column justify-content-center">
               <h2>Tarifs</h2>
               <p>En raison de la particularité de cette activité, nous ne sommes pas en mesure d’afficher de prix fixes. <br></br><strong>Chaque chantier est unique</strong>. <br></br>Chaque arbre doit être analysé au plus prêt de ce qu’il mérite. <br></br>Nous nous déplaçons pour effectuer avec vous un <strong>devis gratuit</strong>. </p>
               <Link href="/contact"><button type="button" className="btn btn-secondary">Nous contacter</button></Link>
@@ -111,8 +110,6 @@ const Home: NextPage = () => {
 
 
       </div>
-      <Footer />
-      <Bottom />
     </div>
   )
 }

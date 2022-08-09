@@ -1,0 +1,18 @@
+.background-icon{
+    position: absolute;
+    z-index: -1;
+    color: grey;
+    .cls-1{
+        fill: rgba(0, 0, 0, 0.1)
+    }
+    &.contact{
+        height: 100vh;
+        top: 30vh;
+        left: -250px;
+    }
+    &.bois{
+        height: 120vh;
+        top: 60vh;
+        right: -250px;
+    }
+}

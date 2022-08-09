@@ -23,7 +23,27 @@
         // padding-right: 50%;
         border-radius: 15px 0 0 15px;
         color: white;
-
+        @include xl {
+            left: 30%;
+            width: 70%;
+            top: 200px;
+        }
+        @include lg {
+            top: 150px;
+            padding: 40px;
+        }
+        @include md {
+            left: 20%;
+            width: 80%;
+            top: 15vh;
+            padding: 30px;
+        }
+        @include sm {
+            left: 10%;
+            width: 90%;
+            top: 12vh;
+            padding: 20px;
+        }
         h1 {
             span {
                 font-weight: bold;
@@ -31,18 +51,42 @@
 
             text-transform: uppercase;
             color: $brand-color;
-            font-size: 64px;
+            font-size: 4rem;
             font-weight: 300;
             margin: 0;
             background-color: transparent;
             padding-left: 0;
+            @include lg {
+                font-size: 3rem;
+            }
+            @include md {
+                font-size: 2rem;
+            }
+            @include sm {
+                font-size: 1.5rem;
+            }
         }
 
         p {
-            font-size: 24px;
+            font-size: 1.4rem;
             font-weight: 500;
             margin-left: 5px;
-            margin-bottom: 50px;
+            @include lg {
+                font-size: 1.1rem;
+            }
+            @include sm {
+                font-size: 1rem;
+            }
+            // margin-bottom: 50px;
+        }
+        .btn{
+            @include lg {
+                margin: 0;
+            }
+            @include sm {
+                display: none;
+            }
+            
         }
     }
 }
@@ -51,9 +95,9 @@
     background-color: $brand-color;
     color: white;
     // margin-left: auto;
-    padding: 20px 0;
+    padding: 20px 10px;
     text-align: center;
-    font-size: 32px;
+    font-size: 2rem;
     text-transform: uppercase;
     font-weight: 500;
     transition: 0.3s all ease;
@@ -61,6 +105,9 @@
         color: $brand-color;
         background-color: $secondary-color;
         transition: 0.3s all ease;
+    }
+    @include md {
+        font-size: 1.5rem;
     }
 
 }

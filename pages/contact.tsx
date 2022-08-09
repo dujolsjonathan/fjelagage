@@ -7,6 +7,8 @@ import Bottom from '../components/Bottom';
 import Head from 'next/head';
 import PhoneRight from "../components/PhoneRight";
 import ContactModal from "../components/ContactModal";
+import BackgroundIcon from "../shared/assets/img/icon.svg";
+
 const Home: NextPage = () => {
 
   const [firstname, setFirstname] = useState('');
@@ -17,7 +19,7 @@ const Home: NextPage = () => {
   const [isSentEmail, setIsSentEmail] = useState(true);
   const [isOpenModal, setIsOpenModal] = useState(false);
 
-  const submitContact = async (event: SubmitEvent) => {
+  const submitContact = async (event: React.FormEvent<HTMLFormElement>) => {
 
     event.preventDefault();
 
@@ -56,7 +58,6 @@ const Home: NextPage = () => {
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         />
       </Head>
-      <PhoneRight phone={'0688674630'} phoneString={'06 88 67 46 30'} />
 
       {isOpenModal && (
         <ContactModal
@@ -68,7 +69,7 @@ const Home: NextPage = () => {
       )}
 
       <Header />
-
+      <BackgroundIcon className="background-icon contact"/>
       <div className='inner-banner' style={{ background: "no-repeat center / cover url('/img/mentions-legales/banner.png')" }}>
         <h1>Contact</h1>
         <i className="fas fa-home"></i>
@@ -164,7 +165,7 @@ const Home: NextPage = () => {
                     // autoComplete="message"
                     required
                   />
-                  <label htmlFor="checkbox" className=" pl-xs italic">En soumettant ce formulaire, j'accepte que les informations saisies dans ce formulaire soient utilisées, exploitées, traitées pour permettre de me recontacter.<br></br>Consulter notre <Link href="/mentions-legales">politique de confidentialité</Link></label>
+                  <label htmlFor="checkbox" className=" pl-xs italic">En soumettant ce formulaire, j&apos;accepte que les informations saisies dans ce formulaire soient utilisées, exploitées, traitées pour permettre de me recontacter.<br></br>Consulter notre <Link href="/mentions-legales">politique de confidentialité</Link></label>
                 </div>
 
                 <button
@@ -178,8 +179,6 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <Footer />
-      <Bottom />
     </div>
   )
 }

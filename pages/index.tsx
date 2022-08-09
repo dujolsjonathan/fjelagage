@@ -2,17 +2,15 @@ import type { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Header from '../components/Header';
-import Footer from '../components/Footer';
-import Bottom from '../components/Bottom';
+
 import Head from 'next/head';
 import Image from 'next/image';
 import wood from "../shared/assets/img/home/elagage1.png";
 import MiniPelle from "../shared/assets/img/home/home-mini-pelle.png";
 import Img2 from "../shared/assets/img/home/bois.jpg";
-import PictoSafely from "../shared/assets/img/home/protection.png";
-import PictoReactivite from "../shared/assets/img/home/fusee.png";
-import PictoCroissance from "../shared/assets/img/home/sauver-la-nature.png";
-import PhoneRight from "../components/PhoneRight";
+import PictoSafety from "../shared/assets/img/home/safety.svg";
+import PictoReactivity from "../shared/assets/img/home/reactivity.svg";
+import PictoGrow from "../shared/assets/img/home/grow.svg";
 // import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -28,40 +26,36 @@ const Home: NextPage = () => {
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         />
       </Head>
-      <PhoneRight phone={'0688674630'} phoneString={'06 88 67 46 30'} />
+      
       <Header />
       <div className='home-banner'>
-        <Image src={wood} alt="..." layout="responsive" objectFit="cover" objectPosition="center" />
+        <Image src={wood} alt="..." layout="responsive" objectFit="contain" objectPosition="center" />
         <div className="banner-title">
           <h1><span>élagage abattage</span><br /> dans les landes</h1>
           <p>20 ans d’expérience à votre service</p>
-          <a href="#" className="btn btn-primary">En savoir plus</a>
+          <Link href="/elagage"><button className="btn btn-primary">En savoir plus</button></Link>
         </div>
 
       </div>
-      <a href="/bois-de-chauffage#tarifs-bois">
-        <div className="container-fluid promotion ">
-          Destockage bois de chauffage - Offre spéciale
-        </div>
-      </a>
-      <div className="main">
-        <div className="container-fluid py-m" style={{ backgroundColor: "white" }}>
-          <div className="container row align-items-stretch justify-content-center align-items-center">
-            <div className="col-md-3 mb-md-m pr-0 d-flex flex-column justify-content-center">
-              <Image src={Img2} alt="..." layout="responsive" objectFit='contain' />
-            </div>
-            <div className="col-md-9 pl-m d-flex flex-column justify-content-center">
-              <h2>Au service de votre jardin</h2>
-              <p>En tant que professionnel du bois, nous fournissons du bois de chauffage toute l’année. Livré chez vous gratuitement dans la mesure de la proximité.<br />Plusieurs tailles et essences disponibles</p>
-            </div>
-
+      <Link href="/bois-de-chauffage#tarifs-bois">
+        <a>
+          <div className="container-fluid promotion ">
+            Destockage bois de chauffage - Offre spéciale
+          </div>
+        </a>
+      </Link>
+      <div className="main mt-5">
+        <div className="container row justify-content-center">
+          <div className="col-md-12 order-md-2 p-s d-flex flex-column justify-content-center">
+            <p className="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus dolor dui. In sit amet ipsum odio. Vestibulum sapien lorem, aliquet ac porttitor sit amet, ultrices in risus. Pellentesque ac gravida risus. Proin euismod nisl at tortor placerat rhoncus. Pellentesque sed accumsan justo. Nam nec turpis non dolor dapibus sodales eleifend vel massa.</p>
+            {/* <Link href="/elagage"><button type="button" className="btn btn-secondary">En savoir plus</button></Link> */}
           </div>
         </div>
 
-        <div className="container-fluid py-m pt-xl">
+        <div className="container-fluid py-md-4">
           <div className="container row align-items-stretch justify-content-center">
 
-            <div className="col-md-6 order-md-2 mb-m p-m d-flex flex-column justify-content-center">
+            <div className="col-md-6 order-md-2 mb-m ps-md-5 d-flex flex-column justify-content-center">
               <h2>Elagage au coeur des Landes</h2>
               <p>L’élagage fait partie de l’entretien courant de votre jardin. Faire appel à une entreprise d‘élagage c’est avant tout <strong>assurer une bonne croissance de vos arbres et arbustes</strong>.<br />Spécialisé depuis 20 ans, en élagage et abatage d’arbres.<br />FJ Elagage vous apporte son savoir-faire. </p>
               <Link href="/elagage"><button type="button" className="btn btn-secondary">En savoir plus</button></Link>
@@ -72,10 +66,10 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <div className="container-fluid py-m" style={{ backgroundColor: "white" }}>
+        <div className="container-fluid py-md-4" style={{ backgroundColor: "white" }}>
           <div className="container row align-items-stretch justify-content-center">
 
-            <div className="col-md-6 mb-m p-m d-flex flex-column justify-content-center">
+            <div className="col-md-6 mb-m pe-md-5  d-flex flex-column justify-content-center">
               <h2>Du bois de chauffage livré toute l’année dans les Landes</h2>
               <p>En tant que professionnel du bois, nous fournissons du <strong>bois de chauffage toute l’année</strong>.<br /><strong>Livré chez vous gratuitement</strong> dans la mesure de la proximité.<br />Plusieurs tailles et essences disponibles</p>
               <Link href="/bois-de-chauffage"><button type="button" className="btn btn-secondary">En savoir plus</button></Link>
@@ -86,22 +80,21 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <div className="container-fluid ">
-          {/* <div className="container-fluid" style={{backgroundColor: "rgba(67, 67, 67, 1)"}}> */}
-          <div className="container pictos-container">
-            <div className="col-md-4 picto-container"><Image className="picto" src={PictoSafely} alt="..." layout="responsive" objectFit='contain' /><span className="text">Sécurité</span></div>
-            <div className="col-md-4 picto-container"><Image className="picto" src={PictoReactivite} alt="..." layout="responsive" objectFit='contain' /><span className="text">Sécurité</span></div>
-            <div className="col-md-4 picto-container"><Image className="picto" src={PictoCroissance} alt="..." layout="responsive" objectFit='contain' /><span className="text">Sécurité</span></div>
+        <div className="container-fluid d-flex flex-column py-md-4">
+          <div className="container pictos-wood">
+            <div className="col-md-3 d-flex justify-content-center align-items-center picto-container"><PictoSafety className="picto" /><span className="text">Sécurité</span></div>
+            <div className="col-md-3 d-flex justify-content-center align-items-center picto-container"><PictoReactivity className="picto" /><span className="text">Réactivité</span></div>
+            <div className="col-md-3 d-flex justify-content-center align-items-center picto-container"><PictoGrow className="picto" /><span className="text">Croissance</span></div>
           </div>
         </div>
 
-        <div className="container-fluid" style={{ backgroundColor: "white" }}>
+        <div className="container-fluid py-md-3" style={{ backgroundColor: "white" }}>
           <div className="container row align-items-stretch justify-content-center">
 
-            <div className="col-md-6 order-md-2 mb-m p-m d-flex flex-column justify-content-center">
+            <div className="col-md-6 order-md-2 mb-m ps-md-5  d-flex flex-column justify-content-center">
               <h2>Prestation mini-pelle</h2>
               <p>L’élagage fait partie de l’entretien courant de votre jardin. Faire appel à une entreprise d‘élagage c’est avant tout <strong>assurer une bonne croissance de vos arbres et arbustes</strong>.<br />Spécialisé depuis 20 ans, en élagage et abatage d’arbres.<br />FJ Elagage vous apporte son savoir-faire. </p>
-              <button type="button" className="btn btn-secondary">En savoir plus</button>
+              <Link href='/mini-pelle'><button type="button" className="btn btn-secondary">En savoir plus</button></Link>
             </div>
             <div className="col-md-6 order-md-1 mb-md-m pr-0 ">
               <Image src={MiniPelle} alt="..." layout="responsive" objectFit='contain' />
@@ -111,8 +104,7 @@ const Home: NextPage = () => {
       </div>
 
 
-      <Footer />
-      <Bottom />
+      
       {/* <div className="nav"></div> */}
       {/* <main className={styles.main}>
         <h1 className={styles.title}>

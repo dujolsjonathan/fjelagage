@@ -24,10 +24,12 @@
         color: white;
         border: 2px solid $brand-color;
         padding: 10px 30px;
+        transition: 0.4s all ease;
         &:hover{
             background-color: $secondary-color;
             color: white;
             border: 2px solid $secondary-color;
+            transition: 0.4s all ease;
         }
     }
 

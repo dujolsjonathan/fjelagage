@@ -15,6 +15,8 @@ import PictoDurable from "../shared/assets/img/bois-de-chauffage/durable.svg";
 import PictoLocal from "../shared/assets/img/bois-de-chauffage/local.svg";
 import PictoRenouvelable from "../shared/assets/img/bois-de-chauffage/renouvelable.svg";
 import PhoneRight from "../components/PhoneRight";
+import BackgroundIcon from "../shared/assets/img/icon.svg";
+
 // import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -29,7 +31,8 @@ const Home: NextPage = () => {
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         />
       </Head>
-      <PhoneRight phone={'0688674630'} phoneString={'06 88 67 46 30'} />
+      <BackgroundIcon className="background-icon bois"/>
+
       <Header />
 
       <div className='inner-banner' style={{ background: "no-repeat center / cover url('/img/bois-de-chauffage/banner.png')" }}>
@@ -45,7 +48,7 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-        <div className="container-fluid py-m">
+        <div className="container-fluid py-md-3">
           <div className="container row align-items-center justify-content-center">
             <div className="col-md-8 order-md-2 mb-m ps-md-5 d-flex flex-column justify-content-center">
               <h2>Les avantages du bois de chauffage</h2>
@@ -61,7 +64,7 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <div className="container-fluid d-flex flex-column mb-m">
+        <div className="container-fluid d-flex flex-column py-m">
           <span style={{ textAlign: 'center', fontSize: '20px' }}>Le circuit est :</span>
           <div className="container pictos-wood">
             <div className="col-md-3 d-flex justify-content-center align-items-center picto-container"><PictoCourt className="picto" /><span className="text">Court</span></div>
@@ -71,7 +74,7 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <div className="container-fluid py-m">
+        <div className="container-fluid py-md-3">
           <div className="container row align-items-center justify-content-center">
 
             <div className="col-md-6 order-md-2 mb-m ps-md-5  d-flex flex-column justify-content-center">
@@ -85,7 +88,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className="container-fluid py-m pb-0">
+        <div className="container-fluid py-md-3">
           <div className="container row align-items-center justify-content-center">
 
             <div className="col-md-6 order-md-1 mb-m pe-md-5  d-flex flex-column justify-content-center">
@@ -105,7 +108,7 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <div className="container-fluid py-m" id="tarifs-bois">
+        <div className="container-fluid py-md-3" id="tarifs-bois">
           <div className="container row align-items-stretch justify-content-start">
 
             <div className="col-md-12 order-md-1 d-flex flex-column justify-content-center">
@@ -216,8 +219,6 @@ const Home: NextPage = () => {
         </div>
 
       </div>
-      <Footer />
-      <Bottom />
     </div >
   )
 }

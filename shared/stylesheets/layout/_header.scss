@@ -42,6 +42,15 @@ $navbar-light-brand-color: blue;
 
         &:hover {
             color: $brand-color;
+            transition: 0.4s all ease;
+        }
+        &.active{
+            // text-decoration: underline;
+            // color: $secondary-color;
+            // background-color: $brand-color;
+            // border-radius: 5px;
+            border-bottom: $brand-color 1px solid;
+            transition: 0.4s all ease;
         }
 
     }
@@ -58,6 +67,10 @@ $navbar-light-brand-color: blue;
         transition: all 0.6s ease;
         .logo {
             transform: scale(0.7);
+            margin-left: -50px;
+            @include md {
+                margin-left: -10px;
+            }
         }
         .navbar-nav .nav-link {
             color: $tertiary-color;
@@ -66,6 +79,10 @@ $navbar-light-brand-color: blue;
 
             &:hover {
                 color: $brand-color;
+            }
+            &.active{
+                // text-decoration: underline;
+                color: $secondary-color;
             }
         }
     }
@@ -93,12 +110,16 @@ $navbar-light-brand-color: blue;
     // margin-left: -20px;
     @include md {
         height: 50px;
+        margin-left: 0px;
     }
     .cls-1 {
         fill: white !important;
     }
 }
 
+.navbar-toggler{
+    margin-right: 20px;
+}
 .inner-banner {
     // margin-top: 100px;
     height: 150px;

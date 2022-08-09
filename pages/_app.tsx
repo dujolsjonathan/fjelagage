@@ -3,7 +3,9 @@ import Script from "next/script"
 import '../styles/globals.css'
 // import '../shared/icons/font-awesome/css/font-awesome.min.css'
 import '../shared/stylesheets/main.scss';
-
+import PhoneRight from "../components/PhoneRight";
+import Footer from '../components/Footer';
+import Bottom from '../components/Bottom';
 
 import type { AppProps } from 'next/app'
 
@@ -26,7 +28,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossOrigin="anonymous" />
+        <PhoneRight phone={'0688674630'} phoneString={'06 88 67 46 30'} />
       <Component {...pageProps} />
+      <Footer />
+      <Bottom />
     </>
   );
 }

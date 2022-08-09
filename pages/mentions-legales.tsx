@@ -26,7 +26,6 @@ const Home: NextPage = () => {
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         />
       </Head>
-      <PhoneRight phone={'0688674630'} phoneString={'06 88 67 46 30'} />
       <Header />
 
       <div className='inner-banner' style={{ background: "no-repeat center / cover url('/img/mentions-legales/banner.png')" }}>
@@ -39,15 +38,15 @@ const Home: NextPage = () => {
             <h2>Éditeur du site</h2>
             <p>Le site fj-elagage.fr est édité par :</p>
             <p>Fg Elagage<br></br>1120 route du bourg neuf<br></br>40400 Meilhan - France<br></br>Tél. :<a href="tel:0648182936"> 06 25 52 32 31</a></p>
-            <p>Responsable de la publication : Cécile Robillard</p>
+            <p>Responsable de la publication : Jérémie Faure</p>
             <h2>Réalisation et hébergement</h2>
             <p>Zukah - Agence Digitale<br></br>27 rue du trouilh<br></br>40400 Meilhan<br></br>Tél :<a href="tel:0648182936"> 06 48 18 29 36</a> </p>
             <h2>Propriété intellectuelle</h2>
             <p>
-              Le contenu de ce site internet est protégé par les droits de propriété intellectuelle et notamment par le droit d’auteur. Toute reproduction de ces contenus est conditionnée à un accord explicite préalable, en vertu de l'article L.122-4 du Code de la Propriété Intellectuelle.
+              Le contenu de ce site internet est protégé par les droits de propriété intellectuelle et notamment par le droit d’auteur. Toute reproduction de ces contenus est conditionnée à un accord explicite préalable, en vertu de l&apos;article L.122-4 du Code de la Propriété Intellectuelle.
             </p>
             <p>
-              Pour toute demande d'autorisation ou d'information, veuillez nous contacter.
+              Pour toute demande d&apos;autorisation ou d&apos;information, veuillez nous contacter.
               </p>
             <h2>Informations et exclusions</h2>
             <p>
@@ -59,14 +58,12 @@ const Home: NextPage = () => {
               </p>
             <h2>Données personnelles</h2>
             <p>
-              L’éditeur de ce site s'engage à ce que les traitements de données personnelles qui y sont effectués soient conformes au Règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés.
+              L’éditeur de ce site s&apos;engage à ce que les traitements de données personnelles qui y sont effectués soient conformes au Règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés.
               </p>
             <p>Pour en savoir plus, consultez la page Protection des données personnelles.</p>
           </div>
         </div>
       </div>
-      <Footer />
-      <Bottom />
     </div>
   )
 }
