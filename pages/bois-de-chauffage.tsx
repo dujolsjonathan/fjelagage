@@ -127,19 +127,19 @@ const Home: NextPage = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>En 30cm</td>
-                    <td>50€</td>
-                    <td>50€</td>
+                    <td>En 33cm</td>
+                    <td>75€</td>
+                    <td>65€</td>
                   </tr>
                   <tr>
                     <td>En 40cm</td>
-                    <td>50€</td>
-                    <td>50€</td>
+                    <td>72€</td>
+                    <td>62€</td>
                   </tr>
                   <tr>
                     <td>En 50cm</td>
-                    <td>50€</td>
-                    <td>50€</td>
+                    <td>70€</td>
+                    <td>60€</td>
                   </tr>
                 </tbody>
               </table>
@@ -163,9 +163,9 @@ const Home: NextPage = () => {
               <p><strong>La quantité de bois reste la même</strong>.</p>
               <p>A titre d’exemple, une stère coupée en :</p>
               <ul>
-                <li>50 cm représente 0,8m3 (1 x 1,25)</li>
-                <li>40 cm représente 0,74m3 (1 x 1,36)</li>
-                <li>33 cm représente 0,7m3 (1 x 1,43)</li>
+                <li>50 cm représente 0,8m3 (1 / 1,25)</li>
+                <li>40 cm représente 0,74m3 (1 / 1,36)</li>
+                <li>33 cm représente 0,7m3 (1 / 1,43)</li>
               </ul>
               {/* <Link href="/elagage"><button type="button" className="btn btn-secondary">En savoir plus</button></Link> */}
             </div>

@@ -63,7 +63,7 @@ const Home: NextPage = ({ informations }: any) => {
       <div className="main mt-5">
         <div className="container row justify-content-center">
           <div className="col-md-12 order-md-2 p-s d-flex flex-column justify-content-center">
-            <p className="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus dolor dui. In sit amet ipsum odio. Vestibulum sapien lorem, aliquet ac porttitor sit amet, ultrices in risus. Pellentesque ac gravida risus. Proin euismod nisl at tortor placerat rhoncus. Pellentesque sed accumsan justo. Nam nec turpis non dolor dapibus sodales eleifend vel massa.</p>
+            <p className="intro">Spécialisé dans la filière du bois, nous vous apportons notre savoir faire dans les Landes ! <br></br>De l'élagage/abattage à la livraison de bois de chauffage, nous sommes à votre écoute depuis deux décennies. </p>
             {/* <Link href="/elagage"><button type="button" className="btn btn-secondary">En savoir plus</button></Link> */}
           </div>
         </div>
@@ -76,8 +76,8 @@ const Home: NextPage = ({ informations }: any) => {
 
             <div className="col-md-6 order-md-2 mb-m ps-md-5 d-flex flex-column justify-content-center">
               <h2>Elagage au coeur des Landes</h2>
-              <p>L’élagage fait partie de l’entretien courant de votre jardin. Faire appel à une entreprise d‘élagage c’est avant tout <strong>assurer une bonne croissance de vos arbres et arbustes</strong>.<br />Spécialisé depuis 20 ans, en élagage et abatage d’arbres.<br />FJ Elagage vous apporte son savoir-faire. </p>
-              <Link href="/elagage"><button type="button" className="btn btn-secondary">En savoir plus</button></Link>
+              <p>L’élagage fait partie de l’entretien courant de votre jardin. Faire appel à une entreprise d‘élagage c’est avant tout <strong>assurer une bonne croissance de vos arbres et arbustes</strong>.<br />Spécialisé depuis 20 ans, en élagage et abatage d’arbres.<br />FJ Elagage vous apporte ses compétences. </p>
+              <Link href="/elagage"><button type="button" className="btn btn-secondary">Je cherche un élageur</button></Link>
             </div>
             <div className="col-md-6 order-md-1 mb-md-m pr-0 ">
               <Image src={wood} alt="..." layout="responsive" objectFit='contain' />
@@ -97,7 +97,7 @@ const Home: NextPage = ({ informations }: any) => {
             <div className="col-md-6 mb-m pe-md-5  d-flex flex-column justify-content-center">
               <h2>Du bois de chauffage livré toute l’année dans les Landes</h2>
               <p>En tant que professionnel du bois, nous fournissons du <strong>bois de chauffage toute l’année</strong>.<br /><strong>Livré chez vous gratuitement</strong> dans la mesure de la proximité.<br />Plusieurs tailles et essences disponibles</p>
-              <Link href="/bois-de-chauffage"><button type="button" className="btn btn-secondary">En savoir plus</button></Link>
+              <Link href="/bois-de-chauffage"><button type="button" className="btn btn-secondary">J'ai besoin de bois</button></Link>
             </div>
             <div className="col-md-6 mb-md-m pl-0">
               <Image src={Img2} alt="..." layout="responsive" objectFit='contain' />
@@ -121,7 +121,7 @@ const Home: NextPage = ({ informations }: any) => {
 
             <div className="col-md-6 order-md-2 mb-m ps-md-5  d-flex flex-column justify-content-center">
               <h2>Prestation mini-pelle</h2>
-              <p>L’élagage fait partie de l’entretien courant de votre jardin. Faire appel à une entreprise d‘élagage c’est avant tout <strong>assurer une bonne croissance de vos arbres et arbustes</strong>.<br />Spécialisé depuis 20 ans, en élagage et abatage d’arbres.<br />FJ Elagage vous apporte son savoir-faire. </p>
+              <p>L’élagage fait partie de l’entretien courant de votre jardin. Faire appel à une entreprise d‘élagage c’est avant tout <strong>assurer une bonne croissance de vos arbres et arbustes</strong>.<br />Spécialisé depuis 20 ans, en élagage et abatage d’arbres.<br />FJ Elagage vous apporte ses compétences. </p>
               <Link href='/mini-pelle'><button type="button" className="btn btn-secondary">En savoir plus</button></Link>
             </div>
             <div className="col-md-6 order-md-1 mb-md-m pr-0 ">
