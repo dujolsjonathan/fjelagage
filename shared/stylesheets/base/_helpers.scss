@@ -306,7 +306,31 @@ $xl: 60px;
 }
 
 .mb-xl {
-  margin-bottom: $xl;
+  margin-top: $xl;
+}
+// Padding top
+.mt-xxs {
+  margin-top: $xxs;
+}
+
+.mt-xs {
+  margin-top: $xs;
+}
+
+.mt-s {
+  margin-top: $s;
+}
+
+.mt-m {
+  margin-top: $m;
+}
+
+.mt-l {
+  margin-top: $l;
+}
+
+.mt-xl {
+  margin-top: $xl;
 }
 // Padding right
 .mr-xxs {

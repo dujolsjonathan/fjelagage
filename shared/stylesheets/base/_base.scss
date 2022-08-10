@@ -33,15 +33,19 @@ a {
   //   text-decoration: underline;
   // }
 }
-.main{
+
+.main {
   overflow: hidden;
+
   a {
     color: $brand-color;
     text-decoration: underline;
     font-weight: bold;
-    &:hover{
+
+    &:hover {
       color: $tertiary-color;
     }
+
     // @include on-event {
     //   color: $text-color;
     //   text-decoration: underline;
@@ -60,16 +64,54 @@ body {
   width: 100vw;
 }
 
-p{
+p {
   font-family: 'Open Sans';
   text-align: justify;
   font-weight: 300;
 }
 
-.intro{
+.intro {
   text-align: center;
   font-style: italic;
 }
-.cls-1{
-  color: #fff!important;
+
+.cls-1 {
+  color: #fff !important;
+}
+
+.image-container {
+
+  // padding: 16px; // same as the spread of the box shadow
+  span {
+    overflow: visible !important;
+  }
+
+  img {
+    // border-radius: var(--m);
+    box-shadow: 2px 2px 80px -25px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.main {
+  ul {
+    color: $secondary-color;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    list-style: none;
+
+    li {
+      &:before {
+        font-family: "Font Awesome 5 Free";
+                content: '\f138';
+                display: inline-block;
+                margin-right: 5px;
+                margin-bottom: 3px;
+                // vertical-align: middle;
+                font-weight: 900;
+                font-size: 16px;
+                // color: $lvl1-color;
+        
+      }
+    }
+  }
 }
