@@ -13,7 +13,7 @@
         height: 160px;
         width: 160px;
         border-radius: 50%;
-        border: 2px solid white;
+        border: 2px solid transparent;
         padding: 25px;
         margin: 30px;
         transition: 0.3s all ease;
@@ -50,4 +50,11 @@
         }
     }
     
+}
+
+.anchor{
+    display: block;
+    position: relative;
+    top: -170px;
+    // visibility: hidden;
 }

@@ -12,7 +12,7 @@ const Top = () => {
                     <a className="ps-md-2" href="tel:0688674630"><i className="fa fa-phone"></i>06 88 67 46 30</a>
                 </div>
                 <div className="right">
-                    <a className="" href="https://www.facebook.com/SARL-FAURE-417324348795353"><i className="fab fa-facebook-f fa-2xl"></i></a>
+                    <a className="" href="https://www.facebook.com/SARL-FAURE-417324348795353" rel="noreferrer" target="_blank"><i className="fab fa-facebook-f fa-2xl"></i></a>
                 </div>
             </div>
         </div>

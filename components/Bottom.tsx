@@ -18,7 +18,7 @@ const Header = () => {
             <div className='container'>
                 <div className="row wrapper ">
                     <div className='col-md-10 bottom-left'>
-                        <span className="element">{new Date().getFullYear()} © FJ Elagage</span>
+                        <span className="element">{new Date().getFullYear()} © FJ Élagage</span>
                         <Link href="/mentions-legales"><a className="element">Mentions Légales</a></Link>
                         <Link href="/donnees-personnelles"><a className="element">Données Personnelles</a></Link>
                         <Link href="#"><a className="element">Gestion des cookies</a></Link>

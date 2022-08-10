@@ -20,9 +20,9 @@ const Home: NextPage = () => {
   return (
     <div className='wrapper'>
       <Head>
-        <title>FJ Elagage - Prestation Mini-pelle</title>
+        <title>FJ Élagage - Prestation Mini-pelle</title>
         <meta name="robots" content="index,follow"></meta>
-        <meta name="description" content="Fj Elagage vous propose la prestation de travaux avec mini-pelle dans les Landes. Disponible à la location, ou bien en prestation de service, la mini-pelle permets le désouchage, l'excavation, les travaux de fondation, le remblayage, le terrassement, la pose de cloture ... " />
+        <meta name="description" content="Fj Élagage vous propose la prestation de travaux avec mini-pelle dans les Landes. Disponible à la location, ou bien en prestation de service, la mini-pelle permets le désouchage, l'excavation, les travaux de fondation, le remblayage, le terrassement, la pose de cloture ... " />
       </Head>
       <Header />
       <div className='inner-banner' style={{ background: "no-repeat center / cover url('/img/mini-pelle/fjelagage-mini-pelle-banner.png')" }}>
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
         {/* Intro */}
         <div className="container row justify-content-center">
           <div className="col-md-12 order-md-2 p-s d-flex flex-column justify-content-center">
-            <p className="intro"><strong>Pratique et rapide</strong>, la mini pelle permets d’exécuter une <strong>multitude de taches</strong> pour un <strong>gain de temps conséquent</strong>.<br></br>A la location ou en prestation, Fj Elagage mets à disposition ses engins pour le bonheur de votre jardin</p>
+            <p className="intro"><strong>Pratique et rapide</strong>, la mini pelle permets d’exécuter une <strong>multitude de taches</strong> pour un <strong>gain de temps conséquent</strong>.<br></br>A la location ou en prestation, Fj Élagage mets à disposition ses engins pour le bonheur de votre jardin</p>
             {/* <Link href="/elagage"><button type="button" className="btn btn-secondary">En savoir plus</button></Link> */}
           </div>
         </div>
@@ -49,7 +49,7 @@ const Home: NextPage = () => {
             </div>
             <div className="col-md-6 order-md-2 mb-md-m pr-0 ">
               <div className='image-container'>
-                <Image src={Desouchage} alt="..." width="100%" height="60%" layout="responsive" objectFit='cover' />
+                <Image src={Desouchage} alt="Désouchage fjelagage.fr" width="100%" height="60%" layout="responsive" objectFit='cover' />
 
               </div>
             </div>
@@ -76,7 +76,7 @@ const Home: NextPage = () => {
             </div>
             <div className="col-md-6 order-md-1 mb-md-m pr-0 ">
               <div className='image-container'>
-                <Image src={MiniPelle} alt="..." width="100%" height="80%" layout="responsive" objectFit='cover' />
+                <Image src={MiniPelle} alt="Travaux tp mini-pelle fjelagage.fr" width="100%" height="80%" layout="responsive" objectFit='cover' />
               </div>
               {/* <PictoPelle2 style={{height: "150px"}}/> */}
             </div>
@@ -91,7 +91,7 @@ const Home: NextPage = () => {
             </div>
             <div className="col-md-6 order-md-2 mb-md-m pr-0 ">
               <div className='image-container'>
-                <Image src={Granulats} alt="..." width="100%" height="60%" layout="responsive" objectFit='cover' />
+                <Image src={Granulats} alt="Livraison de granulats fjelagage.fr" width="100%" height="60%" layout="responsive" objectFit='cover' />
               </div>
             </div>
           </div>
@@ -116,7 +116,7 @@ const Home: NextPage = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>En 33cm</td>
+                    <td>Mini-pelle</td>
                     <td>75€</td>
                     <td>65€</td>
                   </tr>

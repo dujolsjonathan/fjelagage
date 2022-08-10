@@ -27,8 +27,6 @@ const Header = () => {
                 <div className=" row wrapper">
                     <div className="col-md-2 d-flex flex-column block">
                         <Link href="/"><a><Logo className='logo-footer' /></a></Link>
-                        {/* <Image src={Logo} alt="..." layout={'responsive'} objectFit={'contain'} /> */}
-                        {/* <h1 style={{ color: "green" }}> FJ Elagage</h1> */}
                     </div>
                     <div className="col2 col-md-4 offset-md-1 d-flex flex-column block">
                         <h5>Contact</h5>
@@ -45,7 +43,7 @@ const Header = () => {
                             <a href="tel:0688674630"><i className="fas fa-mobile-alt mr-xs ml-xxxs"></i><span>06 88 67 46 30</span></a>
                         </div>
                         <div className='d-flex align-items-center'>
-                        <a href="mailto:jeremiefaure@gmail.com"><i className="far fa-envelope mr-xs"></i><span>jeremiefaure@gmail.com</span></a>
+                        <a href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}><i className="far fa-envelope mr-xs"></i><span>{process.env.NEXT_PUBLIC_EMAIL}</span></a>
                         </div>
                     </div>
 

@@ -2,17 +2,43 @@
     position: absolute;
     z-index: -1;
     color: grey;
+    fill: rgba(179, 177, 177, 0.1)!important;
     .cls-1{
-        fill: rgba(0, 0, 0, 0.1)
+        fill: rgba(228, 228, 228, 0.1)!important;
     }
     &.contact{
+        fill: rgba(0, 0, 0, 0.1)!important;
         height: 100vh;
         top: 30vh;
         left: -250px;
     }
     &.bois{
         height: 120vh;
-        top: 60vh;
+        top: -10vh;
         right: -250px;
+    }
+    &.j{
+        
+        height: 80vh;
+        top: -10vh;
+        right: 125px;
+    }
+    &.arbre{
+        fill: rgba(0, 0, 0, 0.1);
+        height: 80vh;
+        top: -10vh;
+        left: 80px;
+    }
+    &.arbre-index{
+        fill: rgba(0, 0, 0, 0.1);
+        height: 80vh;
+        top: -10vh;
+        left: 0px;
+    }
+    &.elagage{
+        fill: rgba(0, 0, 0, 0.1);
+        height: 80vh;
+        top: 10vh;
+        right: 80px;
     }
 }
