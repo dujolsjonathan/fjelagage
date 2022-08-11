@@ -29,5 +29,7 @@ module.exports = {
 //     return config;
 //   }
 // };
-
+module.exports = {
+    compress: false,
+  }
 module.exports = nextConfig
