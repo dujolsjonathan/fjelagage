@@ -2,10 +2,7 @@ import type { NextPage } from 'next';
 import { useState } from "react";
 import Link from 'next/link';
 import Header from '../components/HeaderInner';
-import Footer from '../components/Footer';
-import Bottom from '../components/Bottom';
 import Head from 'next/head';
-import PhoneRight from "../components/PhoneRight";
 import ContactModal from "../components/ContactModal";
 import BackgroundIcon from "../shared/assets/img/icon.svg";
 
@@ -156,13 +153,10 @@ const Home: NextPage = () => {
                     onChange={(e) => {
                       setMessage(e.target.value)
                     }}
-
-                    // autoComplete="message"
                     required
                   />
-                  <label htmlFor="checkbox" className=" pl-xs italic">En soumettant ce formulaire, j&apos;accepte que les informations saisies dans ce formulaire soient utilisées, exploitées, traitées pour permettre de me recontacter.<br></br>Consulter notre <Link href="/mentions-legales">politique de confidentialité</Link></label>
+                  <label htmlFor="checkbox" className=" pl-xs italic">En soumettant ce formulaire, j&apos;accepte que les informations saisies dans ce formulaire soient utilisées, exploitées, traitées pour permettre de me recontacter.</label>
                 </div>
-
                 <button
                   type="submit"
                   className="btn btn-secondary"

@@ -10,7 +10,7 @@ import Bottom from '../components/Bottom';
 
 import type { AppProps } from 'next/app'
 
-function MyApp({ Component, pageProps, informations }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
