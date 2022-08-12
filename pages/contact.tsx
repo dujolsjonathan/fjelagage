@@ -72,7 +72,7 @@ const Home: NextPage = () => {
           <div className="container row align-items-flex-start justify-content-center">
             <div className="col-md-4 px-0 mb-m d-flex flex-column justify-content-flex-start">
               <h3>FJ Élagage</h3>
-              <p>1120 route du bourg neuf<br></br>40400 Meilhan</p>
+              <span>1120 route du bourg neuf<br></br>40400 Meilhan</span>
               <Link href="tel:0688674630"><button type="button" className="btn btn-secondary">06 88 67 46 30</button></Link>
               <span>Email: <Link href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>{process.env.NEXT_PUBLIC_EMAIL}</Link></span>
             </div>

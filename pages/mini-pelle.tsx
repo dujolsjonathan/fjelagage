@@ -23,7 +23,7 @@ const Home: NextPage = () => {
       <div className="main mt-5">
         {/* Intro */}
         <div className="container row justify-content-center">
-          <div className="col-md-12 order-md-2 p-s d-flex flex-column justify-content-center">
+          <div className="col-md-12 order-md-2 pl-m pr-m d-flex flex-column justify-content-center">
             <p className="intro"><strong>Pratique et rapide</strong>, la mini pelle permets d’exécuter une <strong>multitude de taches</strong> pour un <strong>gain de temps conséquent</strong>.<br></br>A la location ou en prestation, Fj Élagage mets à disposition ses engins pour le bonheur de votre jardin</p>
           </div>
         </div>

@@ -25,7 +25,7 @@ const Home: NextPage = () => {
       <div className="main mt-5">
 
         <div className="container row justify-content-center">
-          <div className="col-md-12 order-md-2 p-s d-flex flex-column justify-content-center">
+          <div className="col-md-12 order-md-2 pl-m pr-m d-flex flex-column justify-content-center">
             <p className="intro"><strong>Élagage, abattage</strong> d&apos;arbres ou arbustes pour <strong>la sécurité ou l&apos;esthétique</strong> ?<br></br>Nous mettons nos services à votre disposition. </p>
           </div>
         </div>

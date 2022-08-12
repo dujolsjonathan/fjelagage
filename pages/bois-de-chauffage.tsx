@@ -30,7 +30,7 @@ const Home: NextPage = () => {
       <div className="main mt-5">
         {/* Intro */}
         <div className="container row justify-content-center">
-          <div className="col-md-12 order-md-2 p-s d-flex flex-column justify-content-center">
+          <div className="col-md-12 order-md-2 pl-m pr-m d-flex flex-column justify-content-center">
             <p className="intro">Le bois de chauffage reste à l&apos;heure actuelle l&apos;un des systèmes de chauffage les plus en vogue. FJ Elagage s&apos;engage à <strong>vous livrer dans les délais les plus court</strong>. Bien qu&apos;en stock la grande majorité de l&apos;année n&apos;attendez pas le dernier moment pour commander !<br></br><strong>Un hiver se prépare à l&apos;avance !</strong></p>
           </div>
         </div>

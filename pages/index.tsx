@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-import { useEffect } from 'react';
 import Link from 'next/link';
 import Header from '../components/Header';
 import Head from 'next/head';
@@ -11,25 +10,10 @@ import Wood from "../shared/assets/img/home/wood.jpg";
 import PictoSafety from "../shared/assets/img/home/safety.svg";
 import PictoReactivity from "../shared/assets/img/home/reactivity.svg";
 import PictoGrow from "../shared/assets/img/home/grow.svg";
-import { motion, useAnimation } from "framer-motion";
 import BackgroundIcon1 from "../shared/assets/img/logo-J.svg";
 import BackgroundIcon3 from "../shared/assets/img/logo-arbre-ombre-2.svg";
-import { useInView } from "react-intersection-observer";
 
 const Home: NextPage = ({ informations }: any) => {
-
-  const control = useAnimation()
-  const [ref, inView] = useInView()
-  const boxVariant = {
-    visible: { opacity: 1, transition: { duration: 0.3 } },
-    hidden: { opacity: 0 },
-  }
-
-  useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    }
-  }, [control, inView]);
 
   return (
     <div className='wrapper'>
@@ -59,7 +43,7 @@ const Home: NextPage = ({ informations }: any) => {
       <div className="main my-5">
         <div className="containerrow justify-content-center">
 
-          <div className="col-md-12 order-md-2 p-s d-flex flex-column justify-content-center">
+          <div className="col-md-12 order-md-2 pl-m pr-m d-flex flex-column justify-content-center">
             <p className="intro">Spécialisé dans la filière du bois, nous vous apportons notre savoir faire dans les Landes ! <br></br>De l&apos;élagage/abattage à la livraison de bois de chauffage, nous sommes à votre écoute depuis deux décennies. </p>
           </div>
         </div>
@@ -97,7 +81,7 @@ const Home: NextPage = ({ informations }: any) => {
           </div>
         </div>
 
-        <div className="container-fluid d-flex position-relative flex-column py-md-4" ref={ref}>
+        <div className="container-fluid d-flex position-relative flex-column py-md-4" >
         <BackgroundIcon1 className="background-icon j" />
 
           <div className="container pictos-wood">
