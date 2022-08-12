@@ -7,7 +7,7 @@ import PhoneRight from "../components/PhoneRight";
 import Footer from '../components/Footer';
 
 import Bottom from '../components/Bottom';
-
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -41,7 +41,18 @@ function MyApp({ Component, pageProps }: AppProps) {
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossOrigin="anonymous" />
       <PhoneRight phone={'0688674630'} phoneString={'06 88 67 46 30'} />
-      <Component {...pageProps} />
+      <GoogleReCaptchaProvider
+        reCaptchaKey="6Ldf82whAAAAAM9_P9P210GBv1hba8O0059YmEa_"
+        scriptProps={{
+          async: false,
+          defer: false,
+          appendTo: "head",
+          nonce: undefined,
+        }}
+      >
+        <Component {...pageProps} />
+      </GoogleReCaptchaProvider>
+
       <Footer />
       <Bottom />
     </>

@@ -1,10 +1,11 @@
 import type { NextPage } from 'next';
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import Link from 'next/link';
 import Header from '../components/HeaderInner';
 import Head from 'next/head';
 import ContactModal from "../components/ContactModal";
 import BackgroundIcon from "../shared/assets/img/icon.svg";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const Home: NextPage = () => {
 
@@ -16,9 +17,25 @@ const Home: NextPage = () => {
   const [isSentEmail, setIsSentEmail] = useState(true);
   const [isOpenModal, setIsOpenModal] = useState(false);
 
-  const submitContact = async (event: React.FormEvent<HTMLFormElement>) => {
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
-    event.preventDefault();
+  //Verify recaptcha
+  const handleSumitForm = useCallback(
+    (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      if (!executeRecaptcha) {
+        console.log("Execute recaptcha not yet available");
+        return;
+      }
+      executeRecaptcha("enquiryFormSubmit").then((gReCaptchaToken) => {
+        console.log(gReCaptchaToken, "response Google reCaptcha server");
+        submitContact(gReCaptchaToken);
+      });
+    },
+    [executeRecaptcha]
+  );
+
+  const submitContact = async (gReCaptchaToken:any) => {
 
     try {
       const res = await fetch(`${process.env.NEXT_PUBLIC_MAIL_SERVER}/api/fjelagage/contact`, {
@@ -27,7 +44,8 @@ const Home: NextPage = () => {
           lastname,
           email,
           phone,
-          message
+          message,
+          gReCaptchaToken
         }),
         headers: {
           "Content-Type": "application/json",
@@ -61,7 +79,7 @@ const Home: NextPage = () => {
       )}
 
       <Header />
-      <BackgroundIcon className="background-icon contact"/>
+      <BackgroundIcon className="background-icon contact" />
       <div className='inner-banner' style={{ background: "no-repeat center / cover url('/img/contact/fjelagage-contact-banner.png')" }}>
         <h1>Contact</h1>
         <i className="fas fa-home"></i>
@@ -77,7 +95,7 @@ const Home: NextPage = () => {
               <span>Email: <Link href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>{process.env.NEXT_PUBLIC_EMAIL}</Link></span>
             </div>
             <div className="col-md-8 p-m mb-md-m px-0">
-              <form className="d-flex flex-column" onSubmit={submitContact}>
+              <form className="d-flex flex-column" onSubmit={handleSumitForm}>
                 <label htmlFor="lastname" className="mb-1 italic">Nom<span>*</span></label>
                 <input
                   className="mb-4 p-xs border-b-2"
