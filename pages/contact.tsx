@@ -9,11 +9,6 @@ import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const Home: NextPage = () => {
 
-  const [firstname, setFirstname] = useState('');
-  const [lastname, setLastname] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [message, setMessage] = useState('');
   const [isSentEmail, setIsSentEmail] = useState(true);
   const [isOpenModal, setIsOpenModal] = useState(false);
 
@@ -28,25 +23,26 @@ const Home: NextPage = () => {
         return;
       }
       executeRecaptcha("enquiryFormSubmit").then((gReCaptchaToken) => {
-        console.log(gReCaptchaToken, "response Google reCaptcha server");
-        submitContact(gReCaptchaToken);
+        const target = e.target as HTMLFormElement;
+        const data = {
+          firstname: target.firstname.value,
+          lastname: target.lastname.value,
+          email: target.email.value,
+          phone: target.phone.value,
+          message: target.message.value,
+          gReCaptchaToken
+        }
+        submitContact(data);
       });
     },
     [executeRecaptcha]
   );
-
-  const submitContact = async (gReCaptchaToken:any) => {
+  
+  const submitContact = async (data:any) => {
 
     try {
       const res = await fetch(`${process.env.NEXT_PUBLIC_MAIL_SERVER}/api/fjelagage/contact`, {
-        body: JSON.stringify({
-          firstname,
-          lastname,
-          email,
-          phone,
-          message,
-          gReCaptchaToken
-        }),
+        body: JSON.stringify(data),
         headers: {
           "Content-Type": "application/json",
         },
@@ -63,6 +59,7 @@ const Home: NextPage = () => {
   };
 
   return (
+    
     <div className='wrapper'>
       <Head>
         <title>FJ Élagage - Élagage</title>
@@ -101,10 +98,10 @@ const Home: NextPage = () => {
                   className="mb-4 p-xs border-b-2"
                   id="lastname"
                   name="lastname"
-                  value={lastname}
-                  onChange={(e) => {
-                    setLastname(e.target.value)
-                  }}
+                  // value={lastname}
+                  // onChange={(e) => {
+                  //   setLastname(e.target.value)
+                  // }}
                   type="text"
                   autoComplete="lastname"
                   required
@@ -114,10 +111,10 @@ const Home: NextPage = () => {
                   className="mb-4 p-xs border-b-2"
                   id="firstname"
                   name="firstname"
-                  value={firstname}
-                  onChange={(e) => {
-                    setFirstname(e.target.value)
-                  }}
+                  // value={firstname}
+                  // onChange={(e) => {
+                  //   setFirstname(e.target.value)
+                  // }}
                   type="text"
                   autoComplete="firstname"
                   required
@@ -127,10 +124,10 @@ const Home: NextPage = () => {
                   className="mb-4 p-xs border-b-2"
                   id="email"
                   name="email"
-                  value={email}
-                  onChange={(e) => {
-                    setEmail(e.target.value)
-                  }}
+                  // value={email}
+                  // onChange={(e) => {
+                  //   setEmail(e.target.value)
+                  // }}
                   type="email"
                   autoComplete="email"
                   required
@@ -141,10 +138,10 @@ const Home: NextPage = () => {
                   id="phone"
                   name="phone"
                   type="phone"
-                  value={phone}
-                  onChange={(e) => {
-                    setPhone(e.target.value)
-                  }}
+                  // value={phone}
+                  // onChange={(e) => {
+                  //   setPhone(e.target.value)
+                  // }}
                   autoComplete="phone"
                   required
                 />
@@ -154,10 +151,10 @@ const Home: NextPage = () => {
                   id="message"
                   name="message"
                   type="textarea"
-                  value={message}
-                  onChange={(e) => {
-                    setMessage(e.target.value)
-                  }}
+                  // value={message}
+                  // onChange={(e) => {
+                  //   setMessage(e.target.value)
+                  // }}
                   autoComplete="message"
                   required
                 />
@@ -167,10 +164,10 @@ const Home: NextPage = () => {
                     id="checkbox"
                     name="checkbox"
                     type="checkbox"
-                    value={message}
-                    onChange={(e) => {
-                      setMessage(e.target.value)
-                    }}
+                    // value={message}
+                    // onChange={(e) => {
+                    //   setMessage(e.target.value)
+                    // }}
                     required
                   />
                   <label htmlFor="checkbox" className=" pl-xs italic">En soumettant ce formulaire, j&apos;accepte que les informations saisies dans ce formulaire soient utilisées, exploitées, traitées pour permettre de me recontacter.</label>
