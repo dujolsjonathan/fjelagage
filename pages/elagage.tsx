@@ -34,7 +34,7 @@ const Home: NextPage = () => {
           <div className="container row align-items-stretch justify-content-center">
             <div className="col-md-8 order-md-2 mb-xs ps-md-5 d-flex flex-column justify-content-center">
               <h2>Pourquoi faire appel à un professionnel ?</h2>
-              <p>Se lancer seul dans une opération d’élagage peut s’avérer <strong>complexe et dangereux</strong>. Spécialement outillé, <Link href="/">FJ Élagage</Link> apporte son savoir faire de manière <strong>sécurisé</strong>. Entretien régulier, arbre difficile d’accès ou menaçant... nous mettons à votre service nos <strong>20 ans d’expérience</strong>. En fonction de la situation, il est possible d’utiliser soit une <strong>nacelle</strong>, ou bien directement à la <strong>grimpe</strong>.</p>
+              <p>Se lancer seul dans une opération d’élagage peut s’avérer <strong>complexe et dangereux</strong>. Spécialement outillé, <Link href="/">FJ Élagage</Link> apporte son savoir faire de manière <strong>sécurisée</strong>. Entretien régulier, arbre difficile d’accès ou menaçant... nous mettons à votre service nos <strong>20 ans d’expérience</strong>. En fonction de la situation, il est possible d’utiliser soit une <strong>nacelle</strong>, ou bien directement à la <strong>grimpe</strong>.</p>
               <p>Le choix de la période est cruciale. <strong>Un professionnel vous orientera rapidement sur la période la plus propice à la bonne défense de l’arbre</strong>. </p>
               <p><strong>L’abattage se pratique toute l’année</strong>.</p>
               <Link href="/contact"><button type="button" className="btn btn-secondary">Nous contacter</button></Link>

@@ -41,7 +41,7 @@ const Home: NextPage = () => {
               <h2>Les avantages du bois de chauffage</h2>
               <p>Malgré une augmentation générale des prix, le bois de chauffage reste plus économique que le gaz, l’électrique ou le fioul. Le bois a le <strong>prix du combustible le plus bas du marché</strong>.</p>
               <p>La chaleur qu’il procure apporte un <strong>environnement plus chaleureux à votre foyer</strong>.
-                De part sa simplicité d’utilisation, le chauffage au bois constitue le <strong>système de chauffage privilégié pour beaucoup de Français</strong>.</p>
+                De par sa simplicité d’utilisation, le chauffage au bois constitue le <strong>système de chauffage privilégié pour beaucoup de Français</strong>.</p>
               <p>En dépit de sa production de gaz carbonique lors de sa combustion, le chauffage au bois est plus écologique… le bois consomme de grande quantité de CO2 toute au long de sa croissance. Ce qui rapproche son bilan carbone de la neutralité.</p>
             </div>
             <div className="col-md-4 order-md-1 mt-s mb-s pr-0 ">
@@ -89,8 +89,6 @@ const Home: NextPage = () => {
               <p>Cette particularité lui donne <strong>l’avantage d’utiliser différentes propriétés physique de chacune</strong>. Le chêne n’est pas un bon bois d’allumage. Couplé avec du bois blanc et du chataignier votre allumage sera plus homogène.</p>
 
               <p>Les essences de bois diffèrent suivant la saison.</p>
-
-              <p>liste des essences</p>
             </div>
             <div className="col-md-6 order-md-2 mt-s mb-s pr-0 ">
               <div className='image-container'>
@@ -149,9 +147,9 @@ const Home: NextPage = () => {
           <div className="container row pb-m justify-content-center">
             <div className="col-md-6 order-md-1 pe-md-5 d-flex flex-column ">
               <h3>Calculer un stère de bois</h3>
-              <p>Un stère correspond à 1m3 de bois coupé en 1m. <strong>Plus la taille des buches est petite, plus la taille de la stère est petite</strong> car les buches s’agencent mieux entre elle.</p>
+              <p>Un stère correspond à 1m3 de bois coupé en 1m. <strong>Plus la taille des buches est petite, plus la taille du stère est petite</strong> car les bûches s’agencent mieux entre elle.</p>
               <p><strong>La quantité de bois reste la même</strong>.</p>
-              <p>A titre d’exemple, une stère coupée en :</p>
+              <p>A titre d’exemple, un stère coupé en :</p>
               <ul>
                 <li>50 cm représente 0,8m3 (1 / 1,25)</li>
                 <li>40 cm représente 0,74m3 (1 / 1,36)</li>

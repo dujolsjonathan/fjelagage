@@ -8,7 +8,6 @@ interface Props {
 }
 
 const ContactModal = ({ phone, phoneString, isSentEmail, closeModal }: Props) => {
-
     return (
         <div className="contact-modal" onClick={closeModal}>
             {isSentEmail ? (

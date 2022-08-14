@@ -24,7 +24,7 @@ const Home: NextPage = () => {
         {/* Intro */}
         <div className="container row justify-content-center">
           <div className="col-md-12 order-md-2 pl-m pr-m d-flex flex-column justify-content-center">
-            <p className="intro"><strong>Pratique et rapide</strong>, la mini pelle permets d’exécuter une <strong>multitude de taches</strong> pour un <strong>gain de temps conséquent</strong>.<br></br>A la location ou en prestation, Fj Élagage mets à disposition ses engins pour le bonheur de votre jardin</p>
+            <p className="intro"><strong>Pratique et rapide</strong>, la mini pelle permets d’exécuter une <strong>multitude de tâches</strong> pour un <strong>gain de temps conséquent</strong>.<br></br>A la location ou en prestation, Fj Élagage met à disposition ses engins pour le bonheur de votre jardin.</p>
           </div>
         </div>
 
@@ -34,7 +34,7 @@ const Home: NextPage = () => {
               <h2>Désouchage</h2>
               <p>Après l’abattage d’un arbre, la souche représente un ensemble de contraintes. La retirer ne vous apportera que des bénéfices. <strong>Son extraction libérera de l’espace dans votre jardin</strong>, ce ne sera que mieux pour son entretien. </p>
               <p>La mini pelle <Link href="https://www.wackerneuson.fr/" ><a target="_blank">Wacker Neuson</a></Link> permettra de retirer la souche et les racines et par la même occasion de niveler et <strong>homogénéiser votre terrain</strong>. </p>
-              <p>Vous pourrez ainsi <strong>replanter en toutes sérénité</strong>.</p>
+              <p>Vous pourrez ainsi <strong>replanter en toute sérénité</strong>.</p>
             </div>
             <div className="col-md-6 order-md-2 mt-s mb-s pr-0 ">
               <div className='image-container'>
@@ -54,7 +54,7 @@ const Home: NextPage = () => {
                 <li>travaux de fondation</li>
                 <li>remblayage</li>
                 <li>terrasement</li>
-                <li>cloture</li>
+                <li>clôture</li>
                 <li>…</li>
               </ul>
               <p>Autant d’exemples qui vous permettrons un <strong>énorme gain de temps et de confort</strong>.</p>

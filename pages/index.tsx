@@ -95,7 +95,7 @@ const Home: NextPage = ({ informations }: any) => {
           <div className="container row align-items-stretch justify-content-center">
             <div className="col-md-6 order-md-2  ps-md-5  d-flex flex-column justify-content-center">
               <h2>Prestation mini-pelle</h2>
-              <p>Un gain de temps dans vos travaux !<br></br>Nous proposons une gamme de prestations sur tous types de chantiers. <strong>Disponible à la location livrée chez vous</strong>, ou bien sur devis pour des travaux plus spécifiques</p>
+              <p>Un gain de temps dans vos travaux !<br></br>Nous proposons une gamme de prestations sur tous types de chantiers.<br></br><strong>Disponible à la location, livrée chez vous</strong> ou bien sur devis pour des travaux plus spécifiques</p>
               <Link href='/mini-pelle'><button type="button" className="btn btn-secondary">En savoir plus</button></Link>
             </div>
             <div className="col-md-6 order-md-1 mt-s mb-s pr-0 ">
