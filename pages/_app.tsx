@@ -31,10 +31,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700&family=Open+Sans:wght@300;500;700&display=swap" rel="stylesheet" />
-
       </Head>
 
      
