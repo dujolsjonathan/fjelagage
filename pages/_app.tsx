@@ -34,12 +34,27 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700&family=Open+Sans:wght@300;500;700&display=swap" rel="stylesheet" />
+
       </Head>
 
+     
       <Script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossOrigin="anonymous" />
+        id="axeptio"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.axeptioSettings = {
+              clientId: "62f8b4b0e1e8bf2ea04c679e",
+              cookiesVersion: "fjelagage-fr",
+            };
+            
+            (function(d, s) {
+              var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+              e.async = true; e.src = "//static.axept.io/sdk.js";
+              t.parentNode.insertBefore(e, t);
+            })(document, "script");
+          `
+        }}
+      />
       <PhoneRight phone={'0688674630'} phoneString={'06 88 67 46 30'} />
       <GoogleReCaptchaProvider
         reCaptchaKey="6Ldf82whAAAAAM9_P9P210GBv1hba8O0059YmEa_"

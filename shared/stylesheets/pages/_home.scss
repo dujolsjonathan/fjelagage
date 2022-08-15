@@ -1,15 +1,9 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
-.wrapper {
-   
-    // max-width: $max-width;
-    // width: 100vw;
-}
+
 
 .home-banner {
-    // background-image: url('../../assets/img/home/home-bg-fg.jpg');
-    // background-size: cover;
     max-height: 100vh;
     overflow: hidden;
     position: relative;
@@ -74,7 +68,6 @@
             @include sm {
                 font-size: 1rem;
             }
-            // margin-bottom: 50px;
         }
         .btn{
             @include lg {
@@ -91,7 +84,6 @@
 .promotion {
     background-color: $brand-color;
     color: white;
-    // margin-left: auto;
     padding: 20px 10px;
     text-align: center;
     font-size: 2rem;
@@ -110,15 +102,10 @@
 }
 
 .pictos-container {
-
-    
     max-width: $max-width;
-    // margin: auto;
-    // padding: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    // height: 200px;
 
     .picto-container {
         height: 160px;

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: fjelagage.fr
+
+# Sitemaps
+Sitemap: fjelagage.fr/sitemap.xml

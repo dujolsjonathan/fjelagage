@@ -22,7 +22,7 @@ const Home: NextPage = () => {
             <p>Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en lposition-relative économie numérique, il est précisé aux utilisateurs du site Fj Elagage lposition-relative identité des différents intervenants dans le cadre de sa réalisation et de son suivi.</p>
             <h2>Édition du site</h2>
             <p>Le présent site <Link href="/">fjelagage.fr</Link> est édité par :</p>
-            <p><strong>Fg Élagage</strong><br></br>Jérémie Faure<br></br>1120 route du bourg neuf<br></br>40400 Meilhan - France<br></br>Tél. :<a href="tel:0648182936"> 06 25 52 32 31</a></p>
+            <p><strong>Fg Élagage</strong><br></br>Jérémie Faure<br></br>1120 route du bourg neuf<br></br>40400 Meilhan - France<br></br>Tél. :<a href="tel:0688674630"> 06 88 67 46 30</a></p>
             <p>Responsable de la publication : Jérémie Faure</p>
             <h2>Réalisation</h2>
             <p><strong>Zukah - Agence Digitale</strong><br></br>27 rue du trouilh<br></br>40400 Meilhan<br></br>Tél :<a href="tel:0648182936"> 06 48 18 29 36</a> </p>
