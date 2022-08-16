@@ -25,7 +25,7 @@ const Home: NextPage = ({ informations }: any) => {
 
       <Header />
       <div className='home-banner'>
-        <Image src={Banner} alt="Bannière accueil Fjelagage.fr" layout="responsive" objectFit="contain" objectPosition="center" />
+        <Image src={Banner} alt="Bannière accueil Fjelagage.fr" layout="responsive" objectFit="contain" objectPosition="center" priority/>
         <div className="banner-title">
           <h1><span>élagage abattage</span><br /> dans les landes</h1>
           <p>20 ans d’expérience à votre service</p>
