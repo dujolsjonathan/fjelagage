@@ -1,11 +1,14 @@
 
-import type { NextPage } from 'next';
-import { useState, useCallback } from "react";
+
 import Link from 'next/link';
 import Header from '../components/HeaderInner';
 import Head from 'next/head';
-import ContactModal from "../components/ContactModal";
-import BackgroundIcon from "../shared/assets/img/icon.svg";
+// Import the FontAwesomeIcon component
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import the icons you need
+import {
+    faHome,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Custom404() {
     return (
@@ -24,7 +27,12 @@ export default function Custom404() {
                 <div className="container404">
                     <h1>Page non trouvée</h1>
                     <p>La page que vous cherchez n&apos;existe pas</p>
-                    <Link href="/"><button type="button" className="btn btn-secondary"><i className="far fa-map-marker-alt mr-xs"></i>Accueil</button></Link>
+                    <Link href="/"><button type="button" className="btn btn-secondary">
+                        <FontAwesomeIcon
+                            icon={faHome}
+                            style={{ fontSize: 20, color: "white", marginRight: 10 }}
+                        />
+                        Accueil</button></Link>
 
 
 

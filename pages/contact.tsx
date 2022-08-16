@@ -7,6 +7,7 @@ import ContactModal from "../components/ContactModal";
 import BackgroundIcon from "../shared/assets/img/icon.svg";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
+
 const Home: NextPage = () => {
 
   const [firstname, setFirstname] = useState('');
@@ -99,7 +100,6 @@ const Home: NextPage = () => {
         <BackgroundIcon className="background-icon contact" />
         <div className='inner-banner' style={{ background: "no-repeat center / cover url('/img/contact/fjelagage-contact-banner.png')" }}>
           <h1>Contact</h1>
-          <i className="fas fa-home"></i>
         </div>
 
         <div className="main">

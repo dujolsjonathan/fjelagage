@@ -1,19 +1,17 @@
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
-import Image from 'next/image';
 import Logo from '../shared/assets/img/footer/logo-footer.svg';
+// Import the FontAwesomeIcon component
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import the icons you need
+import {
+    faMobileAlt,
+    faMapMarkerAlt,
+    faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
 
 const Header = () => {
-    const [show, setShow] = useState(false);
-    const [open, setOpen] = useState("home");
 
-    /* for class fixed  */
-    const [scroll, setScroll] = useState(false);
-    useEffect(() => {
-        window.addEventListener("scroll", () => {
-            setScroll(window.scrollY > 50);
-        });
-    }, []);
     return (
         <div className='footer'>
             <div className='container'>
@@ -32,18 +30,33 @@ const Header = () => {
                         <h5>Contact</h5>
                         <div className='d-flex '>
                             <a className="d-flex" href='https://www.google.fr/maps/place/1120+Rte+du+Bourg+Neuf,+40400+Meilhan/@43.8461799,-0.6958117,17z/data=!3m1!4b1!4m5!3m4!1s0xd542941d5e1b029:0x549662e401e34dc6!8m2!3d43.8461799!4d-0.693623' target='blank'>
-                            <i className="fas fa-map-marker-alt mr-xs ml-xxxs mt-xxs"></i>
-                            <div className='d-flex flex-column'>
-                                <span>1120 route du bourg neuf</span>
-                                <span>40400 Meilhan</span>
-                            </div>
+                                {/* <i className="fas fa-map-marker-alt mr-xs ml-xxxs mt-xxs"></i> */}
+                                <FontAwesomeIcon
+                                    icon={faMapMarkerAlt}
+                                    style={{ fontSize: 16, color: "white", marginLeft: 3, marginRight: 10, marginTop: 5 }}
+                                />
+                                <div className='d-flex flex-column'>
+                                    <span>1120 route du bourg neuf</span>
+                                    <span>40400 Meilhan</span>
+                                </div>
                             </a>
                         </div>
                         <div className='d-flex align-items-center'>
-                            <a href="tel:0688674630"><i className="fas fa-mobile-alt mr-xs ml-xxxs"></i><span>06 88 67 46 30</span></a>
+                            <a href="tel:0688674630">
+                                {/* <i className="fas fa-mobile-alt mr-xs ml-xxxs"></i> */}
+                                <FontAwesomeIcon
+                                    icon={faMobileAlt}
+                                    style={{ fontSize: 16, color: "white", marginLeft: 3, marginRight: 10 }}
+                                />
+                                <span>06 88 67 46 30</span></a>
                         </div>
                         <div className='d-flex align-items-center'>
-                        <a href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}><i className="far fa-envelope mr-xs"></i><span>{process.env.NEXT_PUBLIC_EMAIL}</span></a>
+                            <a href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
+                                <FontAwesomeIcon
+                                    icon={faEnvelope}
+                                    style={{ fontSize: 16, color: "white", marginRight: 10 }}
+                                />
+                                <span>{process.env.NEXT_PUBLIC_EMAIL}</span></a>
                         </div>
                     </div>
 
@@ -55,7 +68,12 @@ const Header = () => {
                     </div>
                     <div className="col-md-2 d-flex flex-column align-items-end block">
                         <h5>Suivez-nous</h5>
-                        <a href="https://www.facebook.com/SARL-FAURE-417324348795353" target='blank'><i className="fab fa-facebook-f fa-2xl"></i></a>
+                        <a href="https://www.facebook.com/SARL-FAURE-417324348795353" target='blank'>
+                            <FontAwesomeIcon
+                                    icon={faFacebookF}
+                                    style={{ fontSize: 35, color: "white" }}
+                                />
+                                </a>
                     </div>
                 </div>
 

@@ -1,7 +1,13 @@
 import Head from "next/head";
+import { useEffect } from "react";
+import { useRouter } from 'next/router'
 import Script from "next/script"
 import '../styles/globals.css'
 // import '../shared/icons/font-awesome/css/font-awesome.min.css'
+import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
+import "bootstrap/dist/css/bootstrap.css"
 import '../shared/stylesheets/main.scss';
 import PhoneRight from "../components/PhoneRight";
 import Footer from '../components/Footer';
@@ -11,6 +17,12 @@ import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+  useEffect(() => {
+    typeof document !== undefined
+      ? require("bootstrap/dist/js/bootstrap")
+      : null;
+  }, [router.events]);
   return (
     <>
       <Head>
@@ -22,18 +34,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff"></meta>
-        <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        />
       </Head>
 
-     
       <Script
         id="axeptio"
         dangerouslySetInnerHTML={{

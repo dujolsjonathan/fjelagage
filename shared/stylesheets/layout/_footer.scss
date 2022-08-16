@@ -67,19 +67,28 @@ $footer-bg-color: #141117;
         &:hover {
             transition: all 0.3s ease;
             // text-decoration: underline;
-            color: $brand-color;
-
+            color: $brand-color !important;
+            svg{
+                transition: all 0.3s ease;
+                color: $brand-color !important;
+            }
+        }
+        svg{
+            transition: all 0.3s ease;
         }
     }
-    .logo-footer{
-        
+
+    .logo-footer {
+
         height: 200px;
+
         // margin: auto;
-        .cls-1{
+        .cls-1 {
             fill: $brand-color;
         }
-        
+
         margin-top: -45px;
+
         @include md {
             margin-top: 0;
         }
@@ -102,8 +111,8 @@ $footer-bg-color: #141117;
         // padding-left: 20px;
         // padding-right: 20px;
         .bottom-left {
-            .element{
-                
+            .element {
+
                 margin-right: 5px;
 
                 &:not(:last-child):after {

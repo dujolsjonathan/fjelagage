@@ -1,4 +1,10 @@
 import Link from 'next/link';
+// Import the FontAwesomeIcon component
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import the icons you need
+import {
+    faHome,
+} from "@fortawesome/free-solid-svg-icons";
 
 interface Props {
     phone: string;
@@ -15,7 +21,12 @@ const ContactModal = ({ phone, phoneString, isSentEmail, closeModal }: Props) =>
                     <p>Nous avons bien reçu vôtre message.</p>
                     <p>Nous y répondrons dans les plus brefs délais</p>
                     <div className="d-flex">
-                        <Link href="/"><button type="button" className="btn btn-secondary mr-s"><i className="fas fa-home mr-xs"></i>Accueil</button></Link>
+                        <Link href="/"><button type="button" className="btn btn-secondary mr-s">
+                            <FontAwesomeIcon
+                                icon={faHome}
+                                style={{ fontSize: 20, color: "white", marginRight: 10 }}
+                            />
+                            Accueil</button></Link>
                         <button type="button" className="btn btn-secondary" onClick={closeModal}>Fermer</button>
                     </div>
                 </div>
