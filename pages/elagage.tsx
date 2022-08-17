@@ -7,6 +7,11 @@ import Elagage2 from "../shared/assets/img/elagage/elagage2.jpg";
 import Professionnel from "../shared/assets/img/elagage/professionnel.png";
 import Image from 'next/image';
 import BackgroundIcon from "../shared/assets/img/logo-arbre-ombre-2.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  faChevronCircleRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Home: NextPage = () => {
   return (
@@ -73,10 +78,10 @@ const Home: NextPage = () => {
               <p>De l’<strong>abattage</strong> au <strong>débardage</strong>, Fj Élagage est autonome et répondra toujours dans le <strong>respect de vos conditions</strong>.</p>
               <p>Également équipé d’une <Link href='/mini-pelle'>pelle mécanique</Link>, il est possible de croiser différentes demandes :</p>
               <ul>
-                <li>renforcement de digue</li>
-                <li>evacuation des branches</li>
-                <li>désouchage</li>
-                <li>terrassement</li>
+                <li><FontAwesomeIcon icon={faChevronCircleRight}/>renforcement de digue</li>
+                <li><FontAwesomeIcon icon={faChevronCircleRight}/>evacuation des branches</li>
+                <li><FontAwesomeIcon icon={faChevronCircleRight}/>désouchage</li>
+                <li><FontAwesomeIcon icon={faChevronCircleRight}/>terrassement</li>
               </ul>
             </div>
             <div className="col-md-5 order-md-1 mt-s mb-s pr-0 ">

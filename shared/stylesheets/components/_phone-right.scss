@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: center;
     top: calc(100vh / 2 - 50px);
-    right: -207px;
+    right: -200px;
     cursor: pointer;
     height: 50px;
     transition: 0.4s;
@@ -19,8 +19,9 @@
         margin-right: 50px;
         font-weight: 500;
         font-size: 20px;
+        padding-left: 0;
     }
-    i{
+    svg{
         font-size: 35px;
         padding: 10px;
     }

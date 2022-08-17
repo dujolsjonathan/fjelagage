@@ -98,12 +98,12 @@ p {
     list-style: none;
 
     li {
-      &:before {
-        font-family: "Font Awesome 5 Free";
-                content: '\f138';
-                display: inline-block;
+     svg {
+        // font-family: "Font Awesome 5 Free";
+        //         content: '\f138';
+        //         display: inline-block;
                 margin-right: 5px;
-                margin-bottom: 3px;
+                // margin-bottom: 3px;
                 // vertical-align: middle;
                 font-weight: 900;
                 font-size: 16px;

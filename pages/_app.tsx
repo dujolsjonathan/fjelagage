@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { useEffect } from "react";
 import { useRouter } from 'next/router'
-import Script from "next/script"
 import '../styles/globals.css'
 // import '../shared/icons/font-awesome/css/font-awesome.min.css'
 import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
@@ -36,23 +35,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="theme-color" content="#ffffff"></meta>
       </Head>
 
-      <Script
-        id="axeptio"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.axeptioSettings = {
-              clientId: "62f8b4b0e1e8bf2ea04c679e",
-              cookiesVersion: "fjelagage-fr",
-            };
-            
-            (function(d, s) {
-              var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
-              e.async = true; e.src = "//static.axept.io/sdk.js";
-              t.parentNode.insertBefore(e, t);
-            })(document, "script");
-          `
-        }}
-      />
       <PhoneRight phone={'0688674630'} phoneString={'06 88 67 46 30'} />
       <GoogleReCaptchaProvider
         reCaptchaKey="6Ldf82whAAAAAM9_P9P210GBv1hba8O0059YmEa_"

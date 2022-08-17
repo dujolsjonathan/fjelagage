@@ -12,7 +12,11 @@ import PictoLocal from "../shared/assets/img/bois-de-chauffage/local.svg";
 import PictoRenouvelable from "../shared/assets/img/bois-de-chauffage/renouvelable.svg";
 import BackgroundIcon1 from "../shared/assets/img/logo-J.svg";
 import BackgroundIcon3 from "../shared/assets/img/logo-arbre-ombre-2.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import {
+  faChevronCircleRight,
+} from "@fortawesome/free-solid-svg-icons";
 const Home: NextPage = () => {
   return (
     <div className='wrapper'>
@@ -151,9 +155,9 @@ const Home: NextPage = () => {
               <p><strong>La quantité de bois reste la même</strong>.</p>
               <p>A titre d’exemple, un stère coupé en :</p>
               <ul>
-                <li>50 cm représente 0,8m3 (1 / 1,25)</li>
-                <li>40 cm représente 0,74m3 (1 / 1,36)</li>
-                <li>33 cm représente 0,7m3 (1 / 1,43)</li>
+                <li><FontAwesomeIcon icon={faChevronCircleRight}/>50 cm représente 0,8m3 (1 / 1,25)</li>
+                <li><FontAwesomeIcon icon={faChevronCircleRight}/>40 cm représente 0,74m3 (1 / 1,36)</li>
+                <li><FontAwesomeIcon icon={faChevronCircleRight}/>33 cm représente 0,7m3 (1 / 1,43)</li>
               </ul>
             </div>
             <div className="col-md-6 order-md-1 pt-m mb-m ps-md-5  d-flex flex-column justify-content-flex-start">

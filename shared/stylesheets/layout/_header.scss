@@ -158,9 +158,15 @@ $navbar-light-brand-color: blue;
             &:hover{
                 color: $secondary-color;
                 transition: 0.4s all ease;
+                svg{
+                    transition: all 0.3s ease;
+                    color: $secondary-color !important;
+                }
             }
         }
-
+        svg{
+            transition: all 0.3s ease;
+        }
         i {
             font-size: 20px;
             padding: 5px;

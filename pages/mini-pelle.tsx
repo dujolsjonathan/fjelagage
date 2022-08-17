@@ -6,7 +6,11 @@ import Image from 'next/image';
 import Desouchage from "../shared/assets/img/mini-pelle/fjelagage-mini-pelle-desouchage.jpg";
 import Granulats from "../shared/assets/img/mini-pelle/fjelagage-mini-pelle-granulats.jpg";
 import MiniPelle from "../shared/assets/img/mini-pelle/fjelagage-mini-pelle.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import {
+  faChevronCircleRight,
+} from "@fortawesome/free-solid-svg-icons";
 const Home: NextPage = () => {
   return (
     <div className='wrapper'>
@@ -50,12 +54,12 @@ const Home: NextPage = () => {
               <h2>Travaux TP dans les Landes</h2>
               <p>De par sa conception et sa mobilité, la mini pelle <strong>facilite la réalisation de différents travaux</strong> dans votre propriété:</p>
               <ul>
-                <li>excavation</li>
-                <li>travaux de fondation</li>
-                <li>remblayage</li>
-                <li>terrasement</li>
-                <li>clôture</li>
-                <li>…</li>
+                <li><FontAwesomeIcon icon={faChevronCircleRight}/>excavation</li>
+                <li><FontAwesomeIcon icon={faChevronCircleRight}/>travaux de fondation</li>
+                <li><FontAwesomeIcon icon={faChevronCircleRight}/>remblayage</li>
+                <li><FontAwesomeIcon icon={faChevronCircleRight}/>terrasement</li>
+                <li><FontAwesomeIcon icon={faChevronCircleRight}/>clôture</li>
+                <li><FontAwesomeIcon icon={faChevronCircleRight}/>…</li>
               </ul>
               <p>Autant d’exemples qui vous permettrons un <strong>énorme gain de temps et de confort</strong>.</p>
               <p>Disponible à la <strong>location</strong>, <Link href="/">Fj Élagage</Link> vous propose également <strong>son expérience pour des travaux nécessitant plus de précision et de savoir faire</strong>.</p>
