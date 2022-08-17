@@ -6,6 +6,7 @@ import Head from 'next/head';
 import ContactModal from "../components/ContactModal";
 import BackgroundIcon from "../shared/assets/img/icon.svg";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 
 const Home: NextPage = () => {
@@ -79,7 +80,15 @@ const Home: NextPage = () => {
     setCheckbox(false);
   }
   return (
-    <>
+    <GoogleReCaptchaProvider
+        reCaptchaKey="6Ldf82whAAAAAM9_P9P210GBv1hba8O0059YmEa_"
+        scriptProps={{
+          async: false,
+          defer: false,
+          appendTo: "head",
+          nonce: undefined,
+        }}
+      >
       {isOpenModal && (
         <ContactModal
           phone={'0688674630'}
@@ -203,7 +212,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-    </>
+      </GoogleReCaptchaProvider>
   )
 }
 
