@@ -8,9 +8,7 @@ import BackgroundIcon from "../shared/assets/img/icon.svg";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
-
-const Home: NextPage = () => {
-
+const ContactForm = () => {
   const [firstname, setFirstname] = useState('');
   const [lastname, setLastname] = useState('');
   const [email, setEmail] = useState('');
@@ -79,22 +77,15 @@ const Home: NextPage = () => {
     setMessage('');
     setCheckbox(false);
   }
+
   return (
-    <GoogleReCaptchaProvider
-        reCaptchaKey="6Ldf82whAAAAAM9_P9P210GBv1hba8O0059YmEa_"
-        scriptProps={{
-          async: false,
-          defer: false,
-          appendTo: "head",
-          nonce: undefined,
-        }}
-      >
+    <>
       {isOpenModal && (
         <ContactModal
           phone={'0688674630'}
           phoneString={'06 88 67 46 30'}
           isSentEmail={isSentEmail}
-          closeModal={() => {setIsOpenModal(false); resetForm()}}
+          closeModal={() => { setIsOpenModal(false); resetForm() }}
         />
       )}
       <div className='wrapper'>
@@ -193,7 +184,7 @@ const Home: NextPage = () => {
                       id="checkbox"
                       name="checkbox"
                       type="checkbox"
-                      checked = {checkbox}
+                      checked={checkbox}
                       onChange={() => {
                         setCheckbox(!checkbox)
                       }}
@@ -213,8 +204,23 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      </GoogleReCaptchaProvider>
+    </>
+  )
+}
+const Contact: NextPage = () => {
+  return (
+    <GoogleReCaptchaProvider
+      reCaptchaKey="6Ldf82whAAAAAM9_P9P210GBv1hba8O0059YmEa_"
+      scriptProps={{
+        async: false,
+        defer: false,
+        appendTo: "head",
+        nonce: undefined,
+      }}
+    >
+      <ContactForm />
+    </GoogleReCaptchaProvider>
   )
 }
 
-export default Home
+export default Contact
