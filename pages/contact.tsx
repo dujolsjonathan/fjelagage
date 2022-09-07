@@ -92,7 +92,7 @@ const ContactForm = () => {
         <Head>
           <title>FJ Élagage - Élagage</title>
           <meta name="robots" content="index,follow"></meta>
-          <meta name="description" content="Contacter Fj Elagage" />
+          <meta name="description" content="Contacter Fj Élagage" />
         </Head>
 
 
