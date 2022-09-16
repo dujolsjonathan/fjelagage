@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: fjelagage.fr
+Host: https://fjelagage.fr
 
 # Sitemaps
-Sitemap: fjelagage.fr/sitemap.xml
+Sitemap: https://fjelagage.fr/sitemap.xml

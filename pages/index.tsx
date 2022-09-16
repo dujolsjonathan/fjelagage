@@ -20,7 +20,7 @@ const Home: NextPage = ({ informations }: any) => {
       <Head>
         <title>FJ Élagage - Élagage - Abattage - Bois de chauffage</title>
         <meta name="robots" content="index,follow"></meta>
-        <meta name="description" content="Spécialisé dans l'élagage et l'abattage d'arbre, nous vous apportons notre savoir faire dans les Landes. Nous proposone également du bois de chauffage toute l'année." />
+        <meta name="description" content="Spécialisé dans l'élagage et l'abattage d'arbre, nous vous apportons notre savoir faire dans les Landes. Nous proposons également du bois de chauffage toute l'année." />
       </Head>
 
       <Header />

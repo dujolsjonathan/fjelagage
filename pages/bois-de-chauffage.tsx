@@ -112,7 +112,7 @@ const Home: NextPage = () => {
             </div>
             <div className="col-md-6 order-md-1 px-m pt-0 pb-m d-flex flex-column justify-content-flex-start">
               <h3>Nos tarifs actuels</h3>
-              <p>Les prix ne sont pas fixes et peuvent changer. Pour plus d'informations merci de nous contacter.</p>
+              <p>Les prix ne sont pas fixes et peuvent changer. Pour plus d&apos;informations merci de nous contacter.</p>
 
               <table className="tarifs">
                 <thead>
