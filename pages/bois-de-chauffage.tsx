@@ -112,6 +112,8 @@ const Home: NextPage = () => {
             </div>
             <div className="col-md-6 order-md-1 px-m pt-0 pb-m d-flex flex-column justify-content-flex-start">
               <h3>Nos tarifs actuels</h3>
+              <p>Les prix ne sont pas fixes et peuvent changer. Pour plus d'informations merci de nous contacter.</p>
+
               <table className="tarifs">
                 <thead>
                   <tr>
@@ -123,23 +125,23 @@ const Home: NextPage = () => {
                 <tbody>
                   <tr>
                     <td>En 33cm</td>
-                    <td>75€</td>
-                    <td>65€</td>
+                    <td>80€</td>
+                    <td>70€</td>
                   </tr>
                   <tr>
                     <td>En 40cm</td>
-                    <td>72€</td>
-                    <td>62€</td>
+                    <td>80€</td>
+                    <td>70€</td>
                   </tr>
                   <tr>
                     <td>En 50cm</td>
+                    <td>80€</td>
                     <td>70€</td>
-                    <td>60€</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <div className="col-md-6 order-md-1  ps-md-5  d-flex flex-column justify-content-center">
+            <div className="col-md-6 order-md-1  ps-md-5  d-flex flex-column justify-content-start">
               <h3>Livraison</h3>
               <p><strong>La livraison est gratuite</strong> dans un périmètre acceptable.</p>
               <p>Compte tenu des cours actuels, <strong>nous ne livrons pas moins de 5 stères</strong>.</p>
