@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="theme-color" content="#ffffff"/>
         <meta property="og:title" content="FJ Élagage"/>
         <meta property="og:type" content="website"/>
-        <meta property="og:image:secure_url" content="https://fjelagage.fr/fjelagage-og.png"/>
+        <meta property="og:image:secure_url" content="https://fjelagage.fr/fjelagage-og.jpeg"/>
         <meta property="og:image" content="https://fjelagage.fr/fjelagage-og.png"/>
         <meta property="og:description" content="Spécialiste élagage, abattage et bois de chauffage"/>
         <meta property="og:locale" content="fr_FR"/>
